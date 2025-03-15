@@ -80,12 +80,22 @@ const config: Config = {
           position: 'left',
           label: 'Leetcode',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          to: '/150-days-roadmap',
+          label: '150 Days Roadmap',
+          position: 'left',
         },
+        // {
+        //   href: '/resume/Nilesh-Engineering-Leader-Resume.pdf',
+        //   label: 'Resume',
+        //   position: 'right',
+        // },
+        // {to: '/blog', label: 'Blog', position: 'left'},
+        // {
+        //   href: 'https://github.com/facebook/docusaurus',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
