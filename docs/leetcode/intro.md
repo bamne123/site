@@ -23,7 +23,7 @@ Whether you’re a beginner or an experienced coder looking for optimized soluti
 
 To make your preparation easier, I’ve curated a list of important LeetCode problems categorized by difficulty and topic. You can access it here:  
 
-📌 **[LeetCode Problem List](https://docs.google.com/spreadsheets/d/1BYcG_xcvXQ9AcWt79Spn5rhC1LwuqOwikZsBgO-mSgY/edit?usp=sharing)**  
+📌 **[LeetCode Problem List](https://docs.google.com/spreadsheets/d/1X5l6fZyiplNCeXHIedWJobxPOrFfcbNQyj92I3xveqo/edit?usp=sharing)**  
 
 This list will help you stay organized and track your progress as you solve problems.  
 

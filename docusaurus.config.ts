@@ -76,12 +76,6 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'leetcodeSidebar',
           position: 'left',
           label: 'Leetcode',
@@ -140,8 +134,9 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.dracula,
+      additionalLanguages: ['jsx', 'python', 'java', 'go', 'csharp'],
+      // darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
 };
