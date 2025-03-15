@@ -20,7 +20,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <a
             className="button button--secondary button--lg"
-            href="/resume/Nilesh-Engineering-Leader-Resume.pdf"
+            href="/site/resume/Nilesh-Engineering-Leader-Resume.pdf"
             target="_blank" rel="noopener noreferrer">
             Download Resume
           </a>

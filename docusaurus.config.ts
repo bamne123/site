@@ -85,11 +85,11 @@ const config: Config = {
           label: '150 Days Roadmap',
           position: 'left',
         },
-        // {
-        //   href: '/resume/Nilesh-Engineering-Leader-Resume.pdf',
-        //   label: 'Resume',
-        //   position: 'right',
-        // },
+        {
+          href: '/site/resume/Nilesh-Engineering-Leader-Resume.pdf',
+          label: 'Resume',
+          position: 'right',
+        },
         // {to: '/blog', label: 'Blog', position: 'left'},
         // {
         //   href: 'https://github.com/facebook/docusaurus',
