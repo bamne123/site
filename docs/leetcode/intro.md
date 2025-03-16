@@ -10,6 +10,10 @@ Struggling with LeetCode? You’re not alone! As someone preparing for FAANG+ in
 
 Whether you’re a beginner or an experienced coder looking for optimized solutions, you’ll find well-documented approaches, intuitive explanations, and alternative methods to enhance your problem-solving skills. Let’s crack coding interviews together!  
 
+## My LeetCode Journey
+
+![LeetCode Stats](https://leetcard.jacoblin.cool/bamne123?theme=light&ext=heatmap)
+
 ## Getting Started  
 
 ### What You'll Need
