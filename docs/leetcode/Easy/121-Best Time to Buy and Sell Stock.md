@@ -51,31 +51,52 @@ The solution iterates through the `prices` array, keeping track of the minimum p
 >
 <TabItem value="python">
 ```python
-def maxProfit(prices):
-    min_price = float('inf')
-    max_profit = 0
-    for price in prices:
-        if price < min_price:
-            min_price = price
-        elif price - min_price > max_profit:
-            max_profit = price - min_price
-    return max_profit
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        if not prices:
+            return 0
+        
+        # Initialize buy at 1st pointer and profit at 0
+        buy, profit = prices[0], 0
+
+        # Initialize sell at 2nd pointer
+        for sell in prices[1:]:
+            if sell > buy:
+                # Take max profit
+                profit = max(profit, sell - buy)
+            else:
+                # if sell is less than buy then Set buy with sell
+                buy = sell
+
+        return profit
 ```
 </TabItem>
 <TabItem value="javascript">
 ```javascript
-function maxProfit(prices) {
-    let minPrice = Infinity;
-    let maxProfit = 0;
-    for (let price of prices) {
-        if (price < minPrice) {
-            minPrice = price;
-        } else if (price - minPrice > maxProfit) {
-            maxProfit = price - minPrice;
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    if(prices.length == 0){
+        return 0;
+    }
+
+    let buy = prices[0];
+    let profit = 0;
+
+    for(let i = 1; i < prices.length; i++){
+        let sell = prices[i];
+
+        if(sell > buy){
+            profit = Math.max(profit, sell - buy);
+        } else {
+            buy = sell
         }
     }
-    return maxProfit;
-}
+
+    return profit;
+};
 ```
 </TabItem>
 <TabItem value="go">

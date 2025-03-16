@@ -52,29 +52,41 @@ The solution iterates through the `nums` array. For each number, it checks if th
 >
 <TabItem value="python">
 ```python
-def twoSum(nums, target):
-    numMap = {}
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in numMap:
-            return [numMap[complement], i]
-        else:
-            numMap[num] = i
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        temp = {}
+
+        for i, num in enumerate(nums):
+            remaining = target - num
+            if remaining in temp:
+                return [temp[remaining], i]
+            else:
+                temp[num] = i
+        
+        return []
 ```
 </TabItem>
 <TabItem value="javascript">
 ```javascript
-function twoSum(nums, target) {
-    const numMap = {};
-    for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
-        if (complement in numMap) {
-            return [numMap[complement], i];
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let temp = {};
+
+    for (let i = 0; i <= nums.length; i++){
+        remaining = target - nums[i];
+        if (remaining in temp){
+            return [temp[remaining], i];
         } else {
-            numMap[nums[i]] = i;
+            temp[nums[i]] = i;
         }
     }
-}
+
+    return [];
+};
 ```
 </TabItem>
 <TabItem value="go">

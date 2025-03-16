@@ -55,11 +55,20 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        left = 0
-        for right in range(len(nums)):
-            if nums[right] != 0:
-                nums[left], nums[right] = nums[right], nums[left]
-                left += 1
+        a, b = 0, 0
+        while b < len(nums):
+            if nums[b] != 0:
+                nums[a], nums[b] = nums[b], nums[a]
+                a += 1
+            b += 1
+            # print(nums)
+
+        # a = 0
+        # for b, num in enumerate(nums):
+        #     if num != 0:
+        #         nums[a], nums[b] = nums[b], nums[a]
+        #         a += 1
+        #         # print(nums)
 ```
 </TabItem>
 <TabItem value='javascript'>
@@ -69,12 +78,18 @@ class Solution:
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-    let left = 0;
-    for (let right = 0; right < nums.length; right++) {
-        if (nums[right] !== 0) {
-            [nums[left], nums[right]] = [nums[right], nums[left]];
-            left++;
+    let a = 0;
+    let b = 0;
+
+    while(b < nums.length){
+        if(nums[b] !== 0){
+            let temp = nums[a];
+            nums[a] = nums[b];
+            nums[b] = temp;
+            // [nums[a], nums[b]] = [nums[b], nums[a]];
+            a++;
         }
+        b++;
     }
 };
 ```

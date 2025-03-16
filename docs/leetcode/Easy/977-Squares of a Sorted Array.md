@@ -48,38 +48,59 @@ The problem requires us to square each element of a sorted array and then sort t
 >
 <TabItem value="python">
 ```python
-def sortedSquares(nums):
-    n = len(nums)
-    result = [0] * n
-    left, right = 0, n - 1
-    for i in range(n - 1, -1, -1):
-        if abs(nums[left]) > abs(nums[right]):
-            result[i] = nums[left] ** 2
-            left += 1
-        else:
-            result[i] = nums[right] ** 2
-            right -= 1
-    return result
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        result = [0] * len(nums)
+
+        for i, num in enumerate(nums):
+            result[i] = num * num
+        
+        result.sort()
+        return result
+
+        # n = len(nums)
+        # result = [0] * n
+        # left, right = 0, n - 1
+        # for i in range(n - 1, -1, -1):
+        #     if abs(nums[left]) > abs(nums[right]):
+        #         result[i] = nums[left] ** 2
+        #         left += 1
+        #     else:
+        #         result[i] = nums[right] ** 2
+        #         right -= 1
+        # return result
 ```
 </TabItem>
 <TabItem value="javascript">
 ```javascript
-function sortedSquares(nums) {
-    const n = nums.length;
-    const result = new Array(n);
-    let left = 0;
-    let right = n - 1;
-    for (let i = n - 1; i >= 0; i--) {
-        if (Math.abs(nums[left]) > Math.abs(nums[right])) {
-            result[i] = nums[left] ** 2;
-            left++;
-        } else {
-            result[i] = nums[right] ** 2;
-            right--;
-        }
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortedSquares = function(nums) {
+    let result = new Array(nums.length);
+
+    for(let i = 0; i < nums.length; i++){
+        result[i] = nums[i] * nums[i];
     }
-    return result;
-}
+
+    return result.sort((a, b) => a - b);
+
+    // const n = nums.length;
+    // const result = new Array(n);
+    // let left = 0;
+    // let right = n - 1;
+    // for (let i = n - 1; i >= 0; i--) {
+    //     if (Math.abs(nums[left]) > Math.abs(nums[right])) {
+    //         result[i] = nums[left] ** 2;
+    //         left++;
+    //     } else {
+    //         result[i] = nums[right] ** 2;
+    //         right--;
+    //     }
+    // }
+    // return result;
+};
 ```
 </TabItem>
 <TabItem value="go">

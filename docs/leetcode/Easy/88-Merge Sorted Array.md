@@ -55,27 +55,26 @@ The problem requires us to merge two sorted arrays, `nums1` and `nums2`, into `n
 <TabItem value='python'>
 ```python
 class Solution:
-    def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
         """
+        # Start with reverse index
         p1 = m - 1
         p2 = n - 1
         p = m + n - 1
 
-        while p1 >= 0 and p2 >= 0:
-            if nums1[p1] > nums2[p2]:
+        # Iterate on nums2 array
+        while p2 >= 0:
+            # nums1 > nums2 then replace nums1 value
+            if p1 >= 0 and nums1[p1] > nums2[p2]:
                 nums1[p] = nums1[p1]
                 p1 -= 1
+            # else replace nums2 value
             else:
                 nums1[p] = nums2[p2]
                 p2 -= 1
-            p -= 1
-
-        # Copy remaining elements from nums2 if any
-        while p2 >= 0:
-            nums1[p] = nums2[p2]
-            p2 -= 1
+            # decrement pointer
             p -= 1
 ```
 </TabItem>
@@ -93,23 +92,16 @@ var merge = function(nums1, m, nums2, n) {
     let p2 = n - 1;
     let p = m + n - 1;
 
-    while (p1 >= 0 && p2 >= 0) {
-        if (nums1[p1] > nums2[p2]) {
+    while(p2 >= 0){
+        if (p1 >= 0 && nums1[p1] > nums2[p2]) {
             nums1[p] = nums1[p1];
-            p1--;
+            p1 --;
         } else {
             nums1[p] = nums2[p2];
-            p2--;
+            p2 --;
         }
-        p--;
-    }
-
-    // Copy remaining elements from nums2 if any
-    while (p2 >= 0) {
-        nums1[p] = nums2[p2];
-        p2--;
-        p--;
-    }
+        p --;
+    }  
 };
 ```
 </TabItem>
