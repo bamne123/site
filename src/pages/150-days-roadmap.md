@@ -8,10 +8,10 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 * Choose days and questions based on your time and availability. 
 * Every 6 days have coding questions. 
 * Every 7th day, have one system design and one low-level design question. 
-* System design and Low-level design questions are taken from these resources:
+<!-- * System design and Low-level design questions are taken from these resources:
     * [System Design Resource](https://lnkd.in/dXywra2R) 
     * [Low-Level Design Resource 1](https://lnkd.in/d6yRpRvy) 
-    * [Low-Level Design Resource 2](https://lnkd.in/deuAXR-U) 
+    * [Low-Level Design Resource 2](https://lnkd.in/deuAXR-U)  -->
 * Every 15th day is a revision day for things practiced in the previous 14 days. 
 * The last section, starting from the 120th day, also has behavioral interview questions. 
 * If you miss any question on a particular day, just carry it over to the next day. 
@@ -24,114 +24,114 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 ### DAY 1
 
 * [Two Sum](docs/leetcode/Easy/Two%20Sum)
-* [Best Time to Buy and Sell Stock]([LeetCode URL for Best Time to Buy and Sell Stock])
-* [Majority Element]([LeetCode URL for Majority Element])
-* [Move Zeroes]([LeetCode URL for Move Zeroes])
-* [Squares of a Sorted Array]([LeetCode URL for Squares of a Sorted Array])
-* [Merge Sorted Array]([LeetCode URL for Merge Sorted Array])
+* [Best Time to Buy and Sell Stock](docs/leetcode/Easy/Best%20Time%20to%20Buy%20and%20Sell%20Stock)
+* [Majority Element](docs/leetcode/Easy/Majority%20Element)
+* [Move Zeroes](docs/leetcode/Easy/Move%20Zeroes)
+* [Squares of a Sorted Array](docs/leetcode/Easy/Squares%20of%20a%20Sorted%20Array)
+* [Merge Sorted Array](docs/leetcode/Easy/Merge%20Sorted%20Array)
 
 ### DAY 2
 
-* [Remove Duplicates from Sorted Array]([LeetCode URL for Remove Duplicates from Sorted Array])
-* [Remove Duplicates from Sorted Array II]([LeetCode URL for Remove Duplicates from Sorted Array II])
-* [Find All Numbers Disappeared in an Array]([LeetCode URL for Find All Numbers Disappeared in an Array])
-* [Intersection of Two Arrays]([LeetCode URL for Intersection of Two Arrays])
-* [Intersection of Two Arrays II]([LeetCode URL for Intersection of Two Arrays II])
-* [Maximum Population Year]([LeetCode URL for Maximum Population Year])
-* [Find Pivot Index]([LeetCode URL for Find Pivot Index])
+* [Remove Duplicates from Sorted Array](docs/leetcode/Easy/Remove%20Duplicates%20from%20Sorted%20Array)
+* [Remove Duplicates from Sorted Array II](docs/leetcode/Medium/Remove%20Duplicates%20from%20Sorted%20Array%20II)
+* [Find All Numbers Disappeared in an Array](docs/leetcode/Easy/Find%20All%20Numbers%20Disappeared%20in%20an%20Array)
+* [Intersection of Two Arrays](docs/leetcode/Easy/Intersection%20of%20Two%20Arrays)
+* [Intersection of Two Arrays II](docs/leetcode/Easy/Intersection%20of%20Two%20Arrays%20II)
+* [Maximum Population Year](docs/leetcode/Easy/Maximum%20Population%20Year)
+* [Find Pivot Index](docs/leetcode/Easy/Find%20Pivot%20Index)
 
 ### DAY 3
 
-* [Running Sum of 1d Array]([LeetCode URL for Running Sum of 1d Array])
-* [Remove Element]([LeetCode URL for Remove Element])
-* [Find Winner on a Tic Tac Toe Game]([LeetCode URL for Find Winner on a Tic Tac Toe Game])
-* [Build Array from Permutation]([LeetCode URL for Build Array from Permutation])
-* [Third Maximum Number]([LeetCode URL for Third Maximum Number])
-* [Valid Mountain Array]([LeetCode URL for Valid Mountain Array])
+* [Running Sum of 1d Array](docs/leetcode/Easy/Running%20Sum%20of%201d%20Array)
+* [Remove Element](docs/leetcode/Easy/Remove%20Element)
+* [Find Winner on a Tic Tac Toe Game](docs/leetcode/Medium/Find%20Winner%20on%20a%20Tic%20Tac%20Toe%20Game)
+* [Build Array from Permutation](docs/leetcode/Easy/Build%20Array%20from%20Permutation)
+* [Third Maximum Number](docs/leetcode/Easy/Third%20Maximum%20Number)
+* [Valid Mountain Array](docs/leetcode/Easy/Valid%20Mountain%20Array)
 
 ### DAY 4
 
-* [Find Common Characters]([LeetCode URL for Find Common Characters])
-* [Sum of All Odd Length Subarrays]([LeetCode URL for Sum of All Odd Length Subarrays])
-* [Range Sum Query - Immutable]([LeetCode URL for Range Sum Query - Immutable])
-* [Shuffle the Array]([LeetCode URL for Shuffle the Array])
-* [Max Consecutive Ones]([LeetCode URL for Max Consecutive Ones])
-* [Sort Array By Parity]([LeetCode URL for Sort Array By Parity])
+* [Find Common Characters](docs/leetcode/Easy/Find%20Common%20Characters)
+* [Sum of All Odd Length Subarrays](docs/leetcode/Easy/Sum%20of%20All%20Odd%20Length%20Subarrays)
+* [Range Sum Query - Immutable](docs/leetcode/Easy/Range%20Sum%20Query%20-%20Immutable)
+* [Shuffle the Array](docs/leetcode/Easy/Shuffle%20the%20Array)
+* [Max Consecutive Ones](docs/leetcode/Easy/Max%20Consecutive%20Ones)
+* [Sort Array By Parity](docs/leetcode/Easy/Sort%20Array%20By%20Parity)
 
 ### DAY 5
 
-* [Reverse Linked List]([LeetCode URL for Reverse Linked List])
-* [Remove Linked List Elements]([LeetCode URL for Remove Linked List Elements])
-* [Remove Duplicates from Sorted List]([LeetCode URL for Remove Duplicates from Sorted List])
-* [Merge Two Sorted Lists]([LeetCode URL for Merge Two Sorted Lists])
-* [Middle of the Linked List]([LeetCode URL for Middle of the Linked List])
-* [Palindrome Linked List]([LeetCode URL for Palindrome Linked List])
+* [Reverse Linked List](docs/leetcode/Easy/Reverse%20Linked%20List)
+* [Remove Linked List Elements](docs/leetcode/Easy/Remove%20Linked%20List%20Elements)
+* [Remove Duplicates from Sorted List](docs/leetcode/Easy/Remove%20Duplicates%20from%20Sorted%20List)
+* [Merge Two Sorted Lists](docs/leetcode/Easy/Merge%20Two%20Sorted%20Lists)
+* [Middle of the Linked List](docs/leetcode/Easy/Middle%20of%20the%20Linked%20List)
+* [Palindrome Linked List](docs/leetcode/Easy/Palindrome%20Linked%20List)
 
 ### DAY 6
 
-* [Intersection of Two Linked Lists]([LeetCode URL for Intersection of Two Linked Lists])
-* [Linked List Cycle]([LeetCode URL for Linked List Cycle])
-* [Valid Parentheses]([LeetCode URL for Valid Parentheses])
-* [Implement Queue using Stacks]([LeetCode URL for Implement Queue using Stacks])
-* [Backspace String Compare]([LeetCode URL for Backspace String Compare])
-* [Next Greater Element I]([LeetCode URL for Next Greater Element I])
+* [Intersection of Two Linked Lists](docs/leetcode/Easy/Intersection%20of%20Two%20Linked%20Lists)
+* [Linked List Cycle](docs/leetcode/Easy/Linked%20List%20Cycle)
+* [Valid Parentheses](docs/leetcode/Easy/Valid%20Parentheses)
+* [Implement Queue using Stacks](docs/leetcode/Easy/Implement%20Queue%20using%20Stacks)
+* [Backspace String Compare](docs/leetcode/Easy/Backspace%20String%20Compare)
+* [Next Greater Element I](docs/leetcode/Easy/Next%20Greater%20Element%20I)
 
 ### DAY 7
 
-* Design a Rate Limiter (System Design) 
-* Design a Library Management System (OOD Design) 
+* Design a Rate Limiter (System Design)
+* Design a Library Management System (OOD Design)
 
 ### DAY 8
 
-* [Binary Tree Preorder Traversal]([LeetCode URL for Binary Tree Preorder Traversal]) 
-* [Binary Tree Inorder Traversal]([LeetCode URL for Binary Tree Inorder Traversal]) 
-* [Binary Tree Postorder Traversal]([LeetCode URL for Binary Tree Postorder Traversal]) 
-* [Maximum Depth of Binary Tree]([LeetCode URL for Maximum Depth of Binary Tree]) 
-* [Invert Binary Tree]([LeetCode URL for Invert Binary Tree]) 
-* [Symmetric Tree]([LeetCode URL for Symmetric Tree]) 
+* [Binary Tree Preorder Traversal](docs/leetcode/Easy/Binary%20Tree%20Preorder%20Traversal)
+* [Binary Tree Inorder Traversal](docs/leetcode/Easy/Binary%20Tree%20Inorder%20Traversal)
+* [Binary Tree Postorder Traversal](docs/leetcode/Easy/Binary%20Tree%20Postorder%20Traversal)
+* [Maximum Depth of Binary Tree](docs/leetcode/Easy/Maximum%20Depth%20of%20Binary%20Tree)
+* [Invert Binary Tree](docs/leetcode/Easy/Invert%20Binary%20Tree)
+* [Symmetric Tree](docs/leetcode/Easy/Symmetric%20Tree)
 
 ### DAY 9
 
-* [Subtree of Another Tree]([LeetCode URL for Subtree of Another Tree]) 
-* [Diameter of Binary Tree]([LeetCode URL for Diameter of Binary Tree]) 
-* [Balanced Binary Tree]([LeetCode URL for Balanced Binary Tree]) 
-* [Merge Two Binary Trees]([LeetCode URL for Merge Two Binary Trees]) 
-* [Same Tree]([LeetCode URL for Same Tree]) 
+* [Subtree of Another Tree](docs/leetcode/Easy/Subtree%20of%20Another%20Tree)
+* [Diameter of Binary Tree](docs/leetcode/Easy/Diameter%20of%20Binary%20Tree)
+* [Balanced Binary Tree](docs/leetcode/Easy/Balanced%20Binary%20Tree)
+* [Merge Two Binary Trees](docs/leetcode/Easy/Merge%20Two%20Binary%20Trees)
+* [Same Tree](docs/leetcode/Easy/Same%20Tree)
 
 ### DAY 10
 
-* [Path Sum]([LeetCode URL for Path Sum]) 
-* [Binary Tree Paths]([LeetCode URL for Binary Tree Paths]) 
-* [Cousins in Binary Tree]([LeetCode URL for Cousins in Binary Tree]) 
-* [Convert Sorted Array to Binary Search Tree]([LeetCode URL for Convert Sorted Array to Binary Search Tree]) 
-* [Range Sum of BST]([LeetCode URL for Range Sum of BST]) 
+* [Path Sum](docs/leetcode/Easy/Path%20Sum)
+* [Binary Tree Paths](docs/leetcode/Easy/Binary%20Tree%20Paths)
+* [Cousins in Binary Tree](docs/leetcode/Easy/Cousins%20in%20Binary%20Tree)
+* [Convert Sorted Array to Binary Search Tree](docs/leetcode/Easy/Convert%20Sorted%20Array%20to%20Binary%20Search%20Tree)
+* [Range Sum of BST](docs/leetcode/Easy/Range%20Sum%20of%20BST)
 
 ### DAY 11
 
-* [Valid Palindrome]([LeetCode URL for Valid Palindrome]) 
-* [Valid Palindrome II]([LeetCode URL for Valid Palindrome II]) 
-* [Longest Palindrome]([LeetCode URL for Longest Palindrome]) 
-* [Longest Common Prefix]([LeetCode URL for Longest Common Prefix]) 
-* [Valid Anagram]([LeetCode URL for Valid Anagram]) 
-* [First Unique Character in a String]([LeetCode URL for First Unique Character in a String]) 
+* [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) 
+* [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) 
+* [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) 
+* [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) 
+* [Valid Anagram](https://leetcode.com/problems/valid-anagram/) 
+* [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) 
 
 ### DAY 12
 
-* [Is Subsequence]([LeetCode URL for Is Subsequence]) 
-* [Reverse String]([LeetCode URL for Reverse String]) 
-* [Reverse String II]([LeetCode URL for Reverse String II]) 
-* [Reverse Words in a String III]([LeetCode URL for Reverse Words in a String III]) 
-* [Isomorphic Strings]([LeetCode URL for Isomorphic Strings]) 
-* [Remove All Adjacent Duplicates In String]([LeetCode URL for Remove All Adjacent Duplicates In String]) 
+* [Is Subsequence](https://leetcode.com/problems/is-subsequence/) 
+* [Reverse String](https://leetcode.com/problems/reverse-string/) 
+* [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) 
+* [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/) 
+* [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) 
+* [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) 
 
 ### DAY 13
 
-* [Defanging an IP Address]([LeetCode URL for Defanging an IP Address]) 
-* [Reverse Only Letters]([LeetCode URL for Reverse Only Letters]) 
-* [Reverse Vowels of a String]([LeetCode URL for Reverse Vowels of a String]) 
-* [Length of Last Word]([LeetCode URL for Length of Last Word]) 
-* [Add Strings]([LeetCode URL for Add Strings]) 
-* [Fizz Buzz]([LeetCode URL for Fizz Buzz]) 
+* [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/) 
+* [Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters/) 
+* [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) 
+* [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) 
+* [Add Strings](https://leetcode.com/problems/add-strings/) 
+* [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) 
 
 ### DAY 14
 
@@ -144,56 +144,56 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 
 ### DAY 16
 
-* [Roman to Integer]([LeetCode URL for Roman to Integer]) 
-* [Palindrome Number]([LeetCode URL for Palindrome Number]) 
-* [Happy Number]([LeetCode URL for Happy Number]) 
-* [Power of Two]([LeetCode URL for Power of Two]) 
-* [Sqrt(x)]([LeetCode URL for Sqrt(x)]) 
-* [Plus One]([LeetCode URL for Plus One]) 
+* [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) 
+* [Palindrome Number](https://leetcode.com/problems/palindrome-number/) 
+* [Happy Number](https://leetcode.com/problems/happy-number/) 
+* [Power of Two](https://leetcode.com/problems/power-of-two/) 
+* [Sqrt(x)](https://leetcode.com/problems/sqrtx/) 
+* [Plus One](https://leetcode.com/problems/plus-one/) 
 
 ### DAY 17
 
-* [Count Odd Numbers in an Interval Range]([LeetCode URL for Count Odd Numbers in an Interval Range]) 
-* [Rectangle Overlap]([LeetCode URL for Rectangle Overlap]) 
-* [Add Digits]([LeetCode URL for Add Digits]) 
-* [Maximum Product of Three Numbers]([LeetCode URL for Maximum Product of Three Numbers]) 
-* [Excel Sheet Column Number]([LeetCode URL for Excel Sheet Column Number]) 
+* [Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/) 
+* [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/) 
+* [Add Digits](https://leetcode.com/problems/add-digits/) 
+* [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) 
+* [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) 
 
 ### DAY 18
 
-* [Add Binary]([LeetCode URL for Add Binary]) 
-* [Counting Bits]([LeetCode URL for Counting Bits]) 
-* [Number of 1 Bits]([LeetCode URL for Number of 1 Bits]) 
-* [Single Number]([LeetCode URL for Single Number]) 
-* [Missing Number]([LeetCode URL for Missing Number]) 
-* [Reverse Bits]([LeetCode URL for Reverse Bits]) 
-* [Hamming Distance]([LeetCode URL for Hamming Distance]) 
+* [Add Binary](https://leetcode.com/problems/add-binary/) 
+* [Counting Bits](https://leetcode.com/problems/counting-bits/) 
+* [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) 
+* [Single Number](https://leetcode.com/problems/single-number/) 
+* [Missing Number](https://leetcode.com/problems/missing-number/) 
+* [Reverse Bits](https://leetcode.com/problems/reverse-bits/) 
+* [Hamming Distance](https://leetcode.com/problems/hamming-distance/) 
 
 ### DAY 19
 
-* [Binary Search]([LeetCode URL for Binary Search]) 
-* [Search Insert Position]([LeetCode URL for Search Insert Position]) 
-* [First Bad Version]([LeetCode URL for First Bad Version]) 
-* [Valid Perfect Square]([LeetCode URL for Valid Perfect Square]) 
-* [Kth Missing Positive Number]([LeetCode URL for Kth Missing Positive Number]) 
-* [Kth Largest Element in a Stream]([LeetCode URL for Kth Largest Element in a Stream]) 
+* [Binary Search](https://leetcode.com/problems/binary-search/) 
+* [Search Insert Position](https://leetcode.com/problems/search-insert-position/) 
+* [First Bad Version](https://leetcode.com/problems/first-bad-version/) 
+* [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) 
+* [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/) 
+* [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) 
 
 ### DAY 20
 
-* [Design HashMap]([LeetCode URL for Design HashMap]) 
-* [Ransom Note]([LeetCode URL for Ransom Note]) 
-* [Contains Duplicate]([LeetCode URL for Contains Duplicate]) 
-* [Contains Duplicate II]([LeetCode URL for Contains Duplicate II]) 
-* [Jewels and Stones]([LeetCode URL for Jewels and Stones]) 
-* [Unique Number of Occurrences]([LeetCode URL for Unique Number of Occurrences]) 
+* [Design HashMap](https://leetcode.com/problems/design-hashmap/) 
+* [Ransom Note](https://leetcode.com/problems/ransom-note/) 
+* [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) 
+* [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) 
+* [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) 
+* [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/) 
 
 ### DAY 21
 
-* [Word Pattern]([LeetCode URL for Word Pattern]) 
-* [Number of Good Pairs]([LeetCode URL for Number of Good Pairs]) 
-* [Flood Fill]([LeetCode URL for Flood Fill]) 
-* [Island Perimeter]([LeetCode URL for Island Perimeter]) 
-* [Find if Path Exists in Graph]([LeetCode URL for Find if Path Exists in Graph]) 
+* [Word Pattern](docs/leetcode/Easy/Word%20Pattern)
+* [Number of Good Pairs](docs/leetcode/Easy/Number%20of%20Good%20Pairs)
+* [Flood Fill](docs/leetcode/Easy/Flood%20Fill)
+* [Island Perimeter](docs/leetcode/Easy/Island%20Perimeter)
+* [Find if Path Exists in Graph](docs/leetcode/Medium/Find%20if%20Path%20Exists%20in%20Graph)
 
 ### DAY 22
 
@@ -202,47 +202,47 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 
 ### DAY 23
 
-* [Fibonacci Number]([LeetCode URL for Fibonacci Number]) 
-* [Min Cost Climbing Stairs]([LeetCode URL for Min Cost Climbing Stairs]) 
-* [Climbing Stairs]([LeetCode URL for Climbing Stairs]) 
-* [Pascal's Triangle]([LeetCode URL for Pascal's Triangle]) 
-* [Can Place Flowers]([LeetCode URL for Can Place Flowers]) 
-* [Maximum Units on a Truck]([LeetCode URL for Maximum Units on a Truck]) 
+* [Fibonacci Number](docs/leetcode/Easy/Fibonacci%20Number)
+* [Min Cost Climbing Stairs](docs/leetcode/Easy/Min%20Cost%20Climbing%20Stairs)
+* [Climbing Stairs](docs/leetcode/Easy/Climbing%20Stairs)
+* [Pascal's Triangle](docs/leetcode/Easy/Pascal's%20Triangle)
+* [Can Place Flowers](docs/leetcode/Easy/Can%20Place%20Flowers)
+* [Maximum Units on a Truck](docs/leetcode/Easy/Maximum%20Units%20on%20a%20Truck)
 
 ### DAY 24
 
-* [3Sum]([LeetCode URL for 3Sum]) 
-* [3Sum Closest]([LeetCode URL for 3Sum Closest]) 
-* [Non-decreasing Array]([LeetCode URL for Non-decreasing Array]) 
-* [Product of Array Except Self]([LeetCode URL for Product of Array Except Self]) 
+* [3Sum](docs/leetcode/Medium/3Sum)
+* [3Sum Closest](docs/leetcode/Medium/3Sum%20Closest)
+* [Non-decreasing Array](docs/leetcode/Medium/Non-decreasing%20Array)
+* [Product of Array Except Self](docs/leetcode/Medium/Product%20of%20Array%20Except%20Self)
 
 ### DAY 25
 
-* [Merge Intervals]([LeetCode URL for Merge Intervals]) 
-* [Insert Interval]([LeetCode URL for Insert Interval]) 
-* [Non-overlapping Intervals]([LeetCode URL for Non-overlapping Intervals]) 
-* [Interval List Intersections]([LeetCode URL for Interval List Intersections]) 
+* [Merge Intervals](docs/leetcode/Medium/Merge%20Intervals)
+* [Insert Interval](docs/leetcode/Medium/Insert%20Interval)
+* [Non-overlapping Intervals](docs/leetcode/Medium/Non-overlapping%20Intervals)
+* [Interval List Intersections](docs/leetcode/Medium/Interval%20List%20Intersections)
 
 ### DAY 26
 
-* [Container With Most Water]([LeetCode URL for Container With Most Water]) 
-* [Sort Colors]([LeetCode URL for Sort Colors]) 
-* [Rotate Array]([LeetCode URL for Rotate Array]) 
-* [Contiguous Array]([LeetCode URL for Contiguous Array]) 
+* [Container With Most Water](docs/leetcode/Medium/Container%20With%20Most%20Water)
+* [Sort Colors](docs/leetcode/Medium/Sort%20Colors)
+* [Rotate Array](docs/leetcode/Medium/Rotate%20Array)
+* [Contiguous Array](docs/leetcode/Medium/Contiguous%20Array)
 
 ### DAY 27
 
-* [Subarray Sum Equals K]([LeetCode URL for Subarray Sum Equals K]) 
-* [Shortest Unsorted Continuous Subarray]([LeetCode URL for Shortest Unsorted Continuous Subarray]) 
-* [Maximum Points You Can Obtain from Cards]([LeetCode URL for Maximum Points You Can Obtain from Cards]) 
-* [Max Consecutive Ones III]([LeetCode URL for Max Consecutive Ones III]) 
+* [Subarray Sum Equals K](docs/leetcode/Medium/Subarray%20Sum%20Equals%20K)
+* [Shortest Unsorted Continuous Subarray](docs/leetcode/Medium/Shortest%20Unsorted%20Continuous%20Subarray)
+* [Maximum Points You Can Obtain from Cards](docs/leetcode/Medium/Maximum%20Points%20You%20Can%20Obtain%20from%20Cards)
+* [Max Consecutive Ones III](docs/leetcode/Medium/Max%20Consecutive%20Ones%20III)
 
 ### DAY 28
 
-* [Permutation in String]([LeetCode URL for Permutation in String]) 
-* [Wiggle Sort II]([LeetCode URL for Wiggle Sort II]) 
-* [Max Chunks To Make Sorted]([LeetCode URL for Max Chunks To Make Sorted]) 
-* [H-Index]([LeetCode URL for H-Index]) 
+* [Permutation in String](docs/leetcode/Medium/Permutation%20in%20String)
+* [Wiggle Sort II](docs/leetcode/Medium/Wiggle%20Sort%20II)
+* [Max Chunks To Make Sorted](docs/leetcode/Medium/Max%20Chunks%20To%20Make%20Sorted)
+* [H-Index](docs/leetcode/Medium/H-Index)
 
 ### DAY 29
 
@@ -255,91 +255,91 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 
 ### DAY 31
 
-* [Remove Nth Node From End of List]([LeetCode URL for Remove Nth Node From End of List]) 
-* [Delete Node in a Linked List]([LeetCode URL for Delete Node in a Linked List]) 
-* [Remove Duplicates from Sorted List II]([LeetCode URL for Remove Duplicates from Sorted List II]) 
-* [Next Greater Node In Linked List]([LeetCode URL for Next Greater Node In Linked List]) 
+* [Remove Nth Node From End of List](docs/leetcode/Medium/Remove%20Nth%20Node%20From%20End%20of%20List)
+* [Delete Node in a Linked List](docs/leetcode/Easy/Delete%20Node%20in%20a%20Linked%20List)
+* [Remove Duplicates from Sorted List II](docs/leetcode/Medium/Remove%20Duplicates%20from%20Sorted%20List%20II)
+* [Next Greater Node In Linked List](docs/leetcode/Medium/Next%20Greater%20Node%20In%20Linked%20List)
 
-### Day 32
+### DAY 32
 
-* [Add Two Numbers]([LeetCode URL for Add Two Numbers])
-* [Add Two Numbers II]([LeetCode URL for Add Two Numbers II])
-* [Copy List with Random Pointer]([LeetCode URL for Copy List with Random Pointer])
-* [Reverse Linked List II]([LeetCode URL for Reverse Linked List II])
+* [Add Two Numbers](docs/leetcode/Medium/Add%20Two%20Numbers)
+* [Add Two Numbers II](docs/leetcode/Medium/Add%20Two%20Numbers%20II)
+* [Copy List with Random Pointer](docs/leetcode/Medium/Copy%20List%20with%20Random%20Pointer)
+* [Reverse Linked List II](docs/leetcode/Medium/Reverse%20Linked%20List%20II)
 
-### Day 33
+### DAY 33
 
-* [Swap Nodes in Pairs]([LeetCode URL for Swap Nodes in Pairs])
-* [Odd Even Linked List]([LeetCode URL for Odd Even Linked List])
-* [Partition List]([LeetCode URL for Partition List])
+* [Swap Nodes in Pairs](docs/leetcode/Medium/Swap%20Nodes%20in%20Pairs)
+* [Odd Even Linked List](docs/leetcode/Medium/Odd%20Even%20Linked%20List)
+* [Partition List](docs/leetcode/Medium/Partition%20List)
 
-### Day 34
+### DAY 34
 
-* [Sort List]([LeetCode URL for Sort List])
-* [Reorder List]([LeetCode URL for Reorder List])
-* [Rotate List]([LeetCode URL for Rotate List])
+* [Sort List](docs/leetcode/Medium/Sort%20List)
+* [Reorder List](docs/leetcode/Medium/Reorder%20List)
+* [Rotate List](docs/leetcode/Medium/Rotate%20List)
 
-### Day 35
+### DAY 35
 
-* [Evaluate Reverse Polish Notation]([LeetCode URL for Evaluate Reverse Polish Notation])
-* [Min Stack]([LeetCode URL for Min Stack])
-* [Daily Temperatures]([LeetCode URL for Daily Temperatures])
-* [Decode String]([LeetCode URL for Decode String])
+* [Evaluate Reverse Polish Notation](docs/leetcode/Medium/Evaluate%20Reverse%20Polish%20Notation)
+* [Min Stack](docs/leetcode/Medium/Min%20Stack)
+* [Daily Temperatures](docs/leetcode/Medium/Daily%20Temperatures)
+* [Decode String](docs/leetcode/Medium/Decode%20String)
 
-### Day 36
+### DAY 36
 
-* [Next Greater Element II]([LeetCode URL for Next Greater Element II])
-* [Next Greater Element III]([LeetCode URL for Next Greater Element III])
-* [Minimum Remove to Make Valid Parentheses]([LeetCode URL for Minimum Remove to Make Valid Parentheses])
-* [132 Pattern]([LeetCode URL for 132 Pattern])
+* [Next Greater Element II](docs/leetcode/Medium/Next%20Greater%20Element%20II)
+* [Next Greater Element III](docs/leetcode/Medium/Next%20Greater%20Element%20III)
+* [Minimum Remove to Make Valid Parentheses](docs/leetcode/Medium/Minimum%20Remove%20to%20Make%20Valid%20Parentheses)
+* [132 Pattern](docs/leetcode/Medium/132%20Pattern)
 
-### Day 37
+### DAY 37
 
 * Design A URL Shortener (System Design)
 * Design a Movie Ticket Booking System (OOD Design)
 
-### Day 38
+### DAY 38
 
-* [Asteroid Collision]([LeetCode URL for Asteroid Collision])
-* [Basic Calculator II]([LeetCode URL for Basic Calculator II])
-* [Remove K Digits]([LeetCode URL for Remove K Digits])
-* [Remove Duplicate Letters]([LeetCode URL for Remove Duplicate Letters])
+* [Asteroid Collision](docs/leetcode/Medium/Asteroid%20Collision)
+* [Basic Calculator II](docs/leetcode/Medium/Basic%20Calculator%20II)
+* [Remove K Digits](docs/leetcode/Medium/Remove%20K%20Digits)
+* [Remove Duplicate Letters](docs/leetcode/Medium/Remove%20Duplicate%20Letters)
 
-### Day 39
+### DAY 39
 
-* [Remove All Adjacent Duplicates in String II]([LeetCode URL for Remove All Adjacent Duplicates in String II])
-* [Flatten Nested List Iterator]([LeetCode URL for Flatten Nested List Iterator])
-* [Simplify Path]([LeetCode URL for Simplify Path])
-* [Longest Absolute File Path]([LeetCode URL for Longest Absolute File Path])
+* [Remove All Adjacent Duplicates in String II](docs/leetcode/Medium/Remove%20All%20Adjacent%20Duplicates%20in%20String%20II)
+* [Flatten Nested List Iterator](docs/leetcode/Medium/Flatten%20Nested%20List%20Iterator)
+* [Simplify Path](docs/leetcode/Medium/Simplify%20Path)
+* [Longest Absolute File Path](docs/leetcode/Medium/Longest%20Absolute%20File%20Path)
 
-### Day 40
+### DAY 40
 
-* [Open the Lock]([LeetCode URL for Open the Lock])
-* [Shortest Bridge]([LeetCode URL for Shortest Bridge])
-* [LRU Cache]([LeetCode URL for LRU Cache])
+* [Open the Lock](docs/leetcode/Medium/Open%20the%20Lock)
+* [Shortest Bridge](docs/leetcode/Medium/Shortest%20Bridge)
+* [LRU Cache](docs/leetcode/Medium/LRU%20Cache)
 
 ### Day 41
 
-* [Longest Substring Without Repeating Characters]([LeetCode URL for Longest Substring Without Repeating Characters])
-* [String to Integer (atoi)]([LeetCode URL for String to Integer (atoi)])
-* [Find All Anagrams in a String]([LeetCode URL for Find All Anagrams in a String])
-* [Group Anagrams]([LeetCode URL for Group Anagrams])
-* [Pancake Sorting]([LeetCode URL for Pancake Sorting])
+* [Longest Substring Without Repeating Characters](docs/leetcode/Medium/Longest%20Substring%20Without%20Repeating%20Characters)
+* [String to Integer (atoi)](docs/leetcode/Medium/String%20to%20Integer%20(atoi))
+* [Find All Anagrams in a String](docs/leetcode/Medium/Find%20All%20Anagrams%20in%20a%20String)
+* [Group Anagrams](docs/leetcode/Medium/Group%20Anagrams)
+* [Pancake Sorting](docs/leetcode/Medium/Pancake%20Sorting)
 
 ### Day 42
 
-* [Longest Repeating Character Replacement]([LeetCode URL for Longest Repeating Character Replacement])
-* [Largest Number]([LeetCode URL for Largest Number])
-* [Number of Matching Subsequences]([LeetCode URL for Number of Matching Subsequences])
-* [Find the Index of the First Occurrence in a String]([LeetCode URL for Find the Index of the First Occurrence in a String])
+* [Longest Repeating Character Replacement](docs/leetcode/Medium/Longest%20Repeating%20Character%20Replacement)
+* [Largest Number](docs/leetcode/Medium/Largest%20Number)
+* [Number of Matching Subsequences](docs/leetcode/Medium/Number%20of%20Matching%20Subsequences)
+* [Find the Index of the First Occurrence in a String](docs/leetcode/Easy/Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String)
 
 ### Day 43
 
-* [Longest Substring with At Least K Repeating Characters]([LeetCode URL for Longest Substring with At Least K Repeating Characters])
-* [Zigzag Conversion]([LeetCode URL for Zigzag Conversion])
-* [Reverse Words in a String]([LeetCode URL for Reverse Words in a String])
-* [String Compression]([LeetCode URL for String Compression])
-* [Count and Say]([LeetCode URL for Count and Say])
+* [Longest Substring with At Least K Repeating Characters](docs/leetcode/Medium/Longest%20Substring%20with%20At%20Least%20K%20Repeating%20Characters)
+* [Zigzag Conversion](docs/leetcode/Medium/Zigzag%20Conversion)
+* [Reverse Words in a String](docs/leetcode/Medium/Reverse%20Words%20in%20a%20String)
+* [String Compression](docs/leetcode/Medium/String%20Compression)
+* [Count and Say](docs/leetcode/Medium/Count%20and%20Say)
 
 ### Day 44
 
@@ -352,45 +352,45 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 
 ### Day 46
 
-* [Binary Tree Level Order Traversal]([LeetCode URL for Binary Tree Level Order Traversal])
-* [Binary Tree Zigzag Level Order Traversal]([LeetCode URL for Binary Tree Zigzag Level Order Traversal])
-* [Construct Binary Tree from Preorder and Inorder Traversal]([LeetCode URL for Construct Binary Tree from Preorder and Inorder Traversal])
-* [Lowest Common Ancestor of a Binary Tree]([LeetCode URL for Lowest Common Ancestor of a Binary Tree])
+* [Binary Tree Level Order Traversal](docs/leetcode/Medium/Binary%20Tree%20Level%20Order%20Traversal)
+* [Binary Tree Zigzag Level Order Traversal](docs/leetcode/Medium/Binary%20Tree%20Zigzag%20Level%20Order%20Traversal)
+* [Construct Binary Tree from Preorder and Inorder Traversal](docs/leetcode/Medium/Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal)
+* [Lowest Common Ancestor of a Binary Tree](docs/leetcode/Medium/Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree)
 
 ### Day 47
 
-* [Binary Tree Right Side View]([LeetCode URL for Binary Tree Right Side View])
-* [Populating Next Right Pointers in Each Node]([LeetCode URL for Populating Next Right Pointers in Each Node])
-* [Populating Next Right Pointers in Each Node II]([LeetCode URL for Populating Next Right Pointers in Each Node II])
-* [Maximum Width of Binary Tree]([LeetCode URL for Maximum Width of Binary Tree])
+* [Binary Tree Right Side View](docs/leetcode/Medium/Binary%20Tree%20Right%20Side%20View)
+* [Populating Next Right Pointers in Each Node](docs/leetcode/Medium/Populating%20Next%20Right%20Pointers%20in%20Each%20Node)
+* [Populating Next Right Pointers in Each Node II](docs/leetcode/Medium/Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II)
+* [Maximum Width of Binary Tree](docs/leetcode/Medium/Maximum%20Width%20of%20Binary%20Tree)
 
 ### Day 48
 
-* [Path Sum II]([LeetCode URL for Path Sum II])
-* [Path Sum III]([LeetCode URL for Path Sum III])
-* [All Nodes Distance K in Binary Tree]([LeetCode URL for All Nodes Distance K in Binary Tree])
-* [Flatten Binary Tree to Linked List]([LeetCode URL for Flatten Binary Tree to Linked List])
+* [Path Sum II](docs/leetcode/Medium/Path%20Sum%20II)
+* [Path Sum III](docs/leetcode/Medium/Path%20Sum%20III)
+* [All Nodes Distance K in Binary Tree](docs/leetcode/Medium/All%20Nodes%20Distance%20K%20in%20Binary%20Tree)
+* [Flatten Binary Tree to Linked List](docs/leetcode/Medium/Flatten%20Binary%20Tree%20to%20Linked%20List)
 
 ### Day 49
 
-* [Count Complete Tree Nodes]([LeetCode URL for Count Complete Tree Nodes])
-* [Sum Root to Leaf Numbers]([LeetCode URL for Sum Root to Leaf Numbers])
-* [Find Bottom Left Tree Value]([LeetCode URL for Find Bottom Left Tree Value])
-* [Distribute Coins in Binary Tree]([LeetCode URL for Distribute Coins in Binary Tree])
+* [Count Complete Tree Nodes](docs/leetcode/Medium/Count%20Complete%20Tree%20Nodes)
+* [Sum Root to Leaf Numbers](docs/leetcode/Medium/Sum%20Root%20to%20Leaf%20Numbers)
+* [Find Bottom Left Tree Value](docs/leetcode/Medium/Find%20Bottom%20Left%20Tree%20Value)
+* [Distribute Coins in Binary Tree](docs/leetcode/Medium/Distribute%20Coins%20in%20Binary%20Tree)
 
 ### Day 50
 
-* [Delete Node in a BST]([LeetCode URL for Delete Node in a BST])
-* [Validate Binary Search Tree]([LeetCode URL for Validate Binary Search Tree])
-* [Kth Smallest Element in a BST]([LeetCode URL for Kth Smallest Element in a BST])
-* [Lowest Common Ancestor of a Binary Search Tree]([LeetCode URL for Lowest Common Ancestor of a Binary Search Tree])
+* [Delete Node in a BST](docs/leetcode/Medium/Delete%20Node%20in%20a%20BST)
+* [Validate Binary Search Tree](docs/leetcode/Medium/Validate%20Binary%20Search%20Tree)
+* [Kth Smallest Element in a BST](docs/leetcode/Medium/Kth%20Smallest%20Element%20in%20a%20BST)
+* [Lowest Common Ancestor of a Binary Search Tree](docs/leetcode/Medium/Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree)
 
 ### Day 51
 
-* [Convert Sorted List to Binary Search Tree]([LeetCode URL for Convert Sorted List to Binary Search Tree])
-* [Construct Binary Search Tree from Preorder Traversal]([LeetCode URL for Construct Binary Search Tree from Preorder Traversal])
-* [Binary Search Tree Iterator]([LeetCode URL for Binary Search Tree Iterator])
-* [Recover Binary Search Tree]([LeetCode URL for Recover Binary Search Tree])
+* [Convert Sorted List to Binary Search Tree](docs/leetcode/Medium/Convert%20Sorted%20List%20to%20Binary%20Search%20Tree)
+* [Construct Binary Search Tree from Preorder Traversal](docs/leetcode/Medium/Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal)
+* [Binary Search Tree Iterator](docs/leetcode/Medium/Binary%20Search%20Tree%20Iterator)
+* [Recover Binary Search Tree](docs/leetcode/Hard/Recover%20Binary%20Search%20Tree)
 
 ### Day 52
 
@@ -399,9 +399,9 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 
 ### Day 53
 
-* [Binary Tree Maximum Path Sum]([LeetCode URL for Binary Tree Maximum Path Sum])
-* [Step-By-Step Directions From a Binary Tree Node to Another]([LeetCode URL for Step-By-Step Directions From a Binary Tree Node to Another])
-* [Maximum Level Sum of a Binary Tree]([LeetCode URL for Maximum Level Sum of a Binary Tree])
+* [Binary Tree Maximum Path Sum](docs/leetcode/Hard/Binary%20Tree%20Maximum%20Path%20Sum)
+* [Step-By-Step Directions From a Binary Tree Node to Another](docs/leetcode/Medium/Step-By-Step%20Directions%20From%20a%20Binary%20Tree%20Node%20to%20Another)
+* [Maximum Level Sum of a Binary Tree](docs/leetcode/Medium/Maximum%20Level%20Sum%20of%20a%20Binary%20Tree)
 
 ### Day 54
 
