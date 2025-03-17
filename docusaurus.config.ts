@@ -80,10 +80,22 @@ const config: Config = {
           position: 'left',
           label: 'Leetcode',
         },
+        // {
+        //   to: '/150-days-roadmap',
+        //   label: '150 Days Roadmap',
+        //   position: 'left',
+        // },
         {
-          to: '/150-days-roadmap',
-          label: '150 Days Roadmap',
+          type: 'docSidebar',
+          sidebarId: 'systemDesignSidebar',
           position: 'left',
+          label: 'System Design',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'interviewsSidebar',
+          position: 'left',
+          label: 'Interviews',
         },
         // {
         //   href: '/site/resume/Nilesh-Engineering-Leader-Resume.pdf',

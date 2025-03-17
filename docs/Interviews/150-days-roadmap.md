@@ -1,4 +1,4 @@
-# 150-Day Roadmap to MAANG Interviews
+# 150-Day Roadmap
 
 This document outlines a 150-day plan to prepare for MAANG interviews.
 
