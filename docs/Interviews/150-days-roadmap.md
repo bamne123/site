@@ -23,12 +23,12 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 
 ### DAY 1
 
-* [Two Sum](docs/leetcode/Easy/Two%20Sum)
-* [Best Time to Buy and Sell Stock](docs/leetcode/Easy/Best%20Time%20to%20Buy%20and%20Sell%20Stock)
-* [Majority Element](docs/leetcode/Easy/Majority%20Element)
-* [Move Zeroes](docs/leetcode/Easy/Move%20Zeroes)
-* [Squares of a Sorted Array](docs/leetcode/Easy/Squares%20of%20a%20Sorted%20Array)
-* [Merge Sorted Array](docs/leetcode/Easy/Merge%20Sorted%20Array)
+* [Two Sum](/docs/leetcode/Easy/Two%20Sum)
+* [Best Time to Buy and Sell Stock](/docs/leetcode/Easy/Best%20Time%20to%20Buy%20and%20Sell%20Stock)
+* [Majority Element](/docs/leetcode/Easy/Majority%20Element)
+* [Move Zeroes](/docs/leetcode/Easy/Move%20Zeroes)
+* [Squares of a Sorted Array](/docs/leetcode/Easy/Squares%20of%20a%20Sorted%20Array)
+* [Merge Sorted Array](/docs/leetcode/Easy/Merge%20Sorted%20Array)
 
 ### DAY 2
 
