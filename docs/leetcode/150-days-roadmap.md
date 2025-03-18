@@ -32,13 +32,13 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 
 ### DAY 2
 
-* [Remove Duplicates from Sorted Array]([LeetCode URL for Remove Duplicates from Sorted Array])
-* [Remove Duplicates from Sorted Array II]([LeetCode URL for Remove Duplicates from Sorted Array II])
-* [Find All Numbers Disappeared in an Array]([LeetCode URL for Find All Numbers Disappeared in an Array])
-* [Intersection of Two Arrays]([LeetCode URL for Intersection of Two Arrays])
-* [Intersection of Two Arrays II]([LeetCode URL for Intersection of Two Arrays II])
-* [Maximum Population Year]([LeetCode URL for Maximum Population Year])
-* [Find Pivot Index]([LeetCode URL for Find Pivot Index])
+* [Remove Duplicates from Sorted Array](/docs/leetcode/Easy/Remove%20Duplicates%20from%20Sorted%20Array)
+* [Remove Duplicates from Sorted Array II](/docs/leetcode/Medium/Remove%20Duplicates%20from%20Sorted%20Array%20II)
+* [Find All Numbers Disappeared in an Array](/docs/leetcode/Easy/Find%20All%20Numbers%20Disappeared%20in%20an%20Array)
+* [Intersection of Two Arrays](/docs/leetcode/Easy/Intersection%20of%20Two%20Arrays)
+* [Intersection of Two Arrays II](/docs/leetcode/Easy/Intersection%20of%20Two%20Arrays%20II)
+* [Maximum Population Year](/docs/leetcode/Easy/Maximum%20Population%20Year)
+* [Find Pivot Index](/docs/leetcode/Easy/Find%20Pivot%20Index)
 
 ### DAY 3
 
