@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Median of Two Sorted Arrays
+# 4 - Median of Two Sorted Arrays
 
 ## Problem Information
 - **Difficulty:** Hard

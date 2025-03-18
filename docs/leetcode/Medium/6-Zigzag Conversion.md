@@ -1,17 +1,7 @@
-```json
-{
-  "title": "Zigzag Conversion",
-  "number": 6,
-  "difficulty": "Medium",
-  "tags": ["String"],
-  "link": "https://leetcode.com/problems/zigzag-conversion"
-}
-```
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Zigzag Conversion
+# 6 - Zigzag Conversion
 
 ## Problem Information
 - **Difficulty:** Medium

@@ -6,57 +6,63 @@ import TabItem from '@theme/TabItem';
 ## Problem Information
 - **Difficulty:** Medium
 - **Category:** Array, Two Pointers
-- **Link:** [LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)
+- **Link:** [LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
 
 ## Problem Statement
-Given a sorted array nums with duplicates, you need to remove the duplicates in-place such that each element appears only once and return the new length of the array.
 
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+Given an integer array `nums` sorted in **non-decreasing order**, remove some duplicates **in-place** such that each unique element appears **at most twice**. The **relative order** of the elements should be kept the **same**.
 
-**Example 1:**
-Input: nums = [1,1,1,2,2,3]
-Output: 5, nums = [1,2,3,_,_]
+Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the **first part** of the array `nums`. More formally, if there are `k` elements after removing the duplicates, then the first `k` elements of `nums` should hold the final result. It does not matter what you leave beyond the first `k` elements.
 
-Explanation: Your function should return length = 5, and nums should become [1,2,3,_,_]. It doesn't matter what you put in those extra two ends.
+Return `k` *after placing the final result in the first `k` slots of* `nums`.
 
+Do **not** allocate extra space for another array. You must do this by **modifying the input array in-place** with O(1) extra memory.
 
-**Example 2:**
-Input: nums = [0,0,1,1,1,2,2,3,3,4]
-Output: 5, nums = [0,1,2,3,4]
+**Custom Judge:**
 
-## Constraints
-- `1 <= nums.length <= 3 * 10^4`
-- `-10^9 <= nums[i] <= 10^9`
-- nums is sorted in ascending order.
+The judge will test your solution with the following code:
 
+```
+int[] nums = [...]; // Input array
+int[] expectedNums = [...]; // The expected answer with correct length
 
+int k = removeDuplicates(nums); // Calls your implementation
+
+assert k == expectedNums.length;
+for (int i = 0; i < k; i++) {
+    assert nums[i] == expectedNums[i];
+}
+```
+
+If all assertions pass, then your solution will be **accepted**.
+
+### Hints
+- Think about how you can modify the array in-place.
+- Consider using two pointers.
+- Remember that you need to maintain the order of the elements.
 
 ## Solution Approach
-The problem can be solved efficiently using the Two Pointers approach with an optimization to handle the duplicates.
+The solution uses a two-pointer approach. 
 
-1. **Initialization:**
-   - Initialize two pointers, `slow` and `fast`, both pointing to the beginning of the array.
+1. Initialize two pointers, `slow` and `fast`, both starting at 0.
+2. Iterate through the array using the `fast` pointer.
+3. If the current element pointed to by `fast` is different from the element pointed to by `slow`, then increment `slow` and copy the element pointed to by `fast` to the position pointed to by `slow`.
+4. Otherwise, if the current element pointed to by `fast` is the same as the element pointed to by `slow`, increment `fast`. 
+5. Continue this process until `fast` reaches the end of the array.
+6. The `slow` pointer will point to the index of the last unique element, and `k` will be `slow + 1`.
 
-2. **Traversal:**
-   - Iterate through the array using the `fast` pointer.
-   - If `nums[fast]` is different from `nums[slow]`, it's a unique element. Move `slow` forward and copy `nums[fast]` to `nums[slow]`.
-
-3. **Duplicate Handling:**
-   - If `nums[fast]` is equal to `nums[slow]`, it's a duplicate.
-   - Skip the duplicate by incrementing `fast`.
-
-4. **Return Length:**
-   - The value of `slow` will point to the next available position for a unique element.
-   - Return `slow + 1` as the new length of the array.
-
-
+**Video Explanation:**
+<iframe 
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/ycAq8iqh0TI" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
 
 ### Complexity Analysis
-- **Time Complexity:** O(n)
-  - We traverse the array once using the `fast` pointer.
-- **Space Complexity:** O(1)
-  - We only use a constant amount of extra space for the pointers.
-
+- **Time Complexity:** O(n) - We iterate through the array once using the `fast` pointer.
+- **Space Complexity:** O(1) - We only use a constant amount of extra space for the pointers.
 
 ### Code Implementation
 
@@ -64,59 +70,40 @@ The problem can be solved efficiently using the Two Pointers approach with an op
   defaultValue="python"
   groupId="cody"
   values={[
-    {label: "Javascript", value: "javascript" },
     {label: "Python", value: "python" },
-    {label: "Go", value: "go" },
+    {label: "JavaScript", value: "javascript" },
     {label: "Java", value: "java" },
-    {label: "Csharp", value: "csharp" },
+    {label: "C#", value: "csharp" },
+    {label: "Go", value: "go" },
   ]}
 >
-<TabItem value="javascript">
-```javascript
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var removeDuplicates = function(nums) {
-    let slow = 0;
-    let fast = 0;
-    while (fast < nums.length) {
-        if (nums[fast] !== nums[slow]) {
-            slow++;
-            nums[slow] = nums[fast];
-        }
-        fast++;
-    }
-    return slow + 1;
-};
-```
-</TabItem>
 <TabItem value="python">
 ```python
 def removeDuplicates(nums):
     slow = 0
-    fast = 0
+    fast = 1
     while fast < len(nums):
-        if nums[fast] != nums[slow]:
+        if nums[slow] != nums[fast]:
             slow += 1
             nums[slow] = nums[fast]
         fast += 1
     return slow + 1
 ```
 </TabItem>
-<TabItem value="go">
-```go
-func removeDuplicates(nums []int) int {
-    slow := 0
-    fast := 0
-    for fast < len(nums) {
-        if nums[fast] != nums[slow] {
-            slow++
-            nums[slow] = nums[fast]
+
+<TabItem value="javascript">
+```javascript
+function removeDuplicates(nums) {
+    let slow = 0;
+    let fast = 1;
+    while (fast < nums.length) {
+        if (nums[slow] !== nums[fast]) {
+            slow++;
+            nums[slow] = nums[fast];
         }
-        fast++
+        fast++;
     }
-    return slow + 1
+    return slow + 1;
 }
 ```
 </TabItem>
@@ -125,9 +112,9 @@ func removeDuplicates(nums []int) int {
 class Solution {
     public int removeDuplicates(int[] nums) {
         int slow = 0;
-        int fast = 0;
+        int fast = 1;
         while (fast < nums.length) {
-            if (nums[fast] != nums[slow]) {
+            if (nums[slow] != nums[fast]) {
                 slow++;
                 nums[slow] = nums[fast];
             }
@@ -143,9 +130,9 @@ class Solution {
 public class Solution {
     public int RemoveDuplicates(int[] nums) {
         int slow = 0;
-        int fast = 0;
+        int fast = 1;
         while (fast < nums.Length) {
-            if (nums[fast] != nums[slow]) {
+            if (nums[slow] != nums[fast]) {
                 slow++;
                 nums[slow] = nums[fast];
             }
@@ -156,22 +143,42 @@ public class Solution {
 }
 ```
 </TabItem>
+<TabItem value="go">
+```go
+func removeDuplicates(nums []int) int {
+    slow := 0
+    fast := 1
+    for fast < len(nums) {
+        if nums[slow] != nums[fast] {
+            slow++
+            nums[slow] = nums[fast]
+        }
+        fast++
+    }
+    return slow + 1
+}
+```
+</TabItem>
 </Tabs>
 
 ### Step-by-Step Explanation
-1. Start with two pointers, `slow` and `fast`, both at index 0.
-2. Iterate through the array using the `fast` pointer.
-3. If the element at `fast` is different from the element at `slow`, it means we've encountered a new unique element. Move the `slow` pointer forward by one position and copy the element at `fast` to `slow`.
-4. If the elements are the same, it's a duplicate. Simply increment the `fast` pointer to skip the duplicate.
-5. Continue this process until `fast` reaches the end of the array.
-6. The value of `slow` will point to the last unique element in the modified array.
-7. Return `slow + 1` as the new length of the array.
+1. Initialize `slow` and `fast` to 0 and 1 respectively.
+2. Iterate through the array using `fast`. 
+3. If the element pointed to by `fast` is different from the element pointed to by `slow`, increment `slow` and copy the element pointed to by `fast` to the position pointed to by `slow`. 
+4. Otherwise, if the element pointed to by `fast` is the same as the element pointed to by `slow`, increment `fast` only.
+5. Repeat steps 2-4 until `fast` reaches the end of the array.
+6. `slow` will point to the index of the last unique element, and `k` will be `slow + 1`.
 
 ## Alternative Approaches
-
+N/A
 
 ## Common Mistakes and Pitfalls
+- Forgetting to handle the case where the array is already sorted with no duplicates.
 
 
 
 ## Related Problems
+- [Remove Duplicates from Sorted Array][https://leetcode.com/problems/remove-duplicates-from-sorted-array/](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+- [Container With Most Water][https://leetcode.com/problems/container-with-most-water/](https://leetcode.com/problems/container-with-most-water/)
+
+

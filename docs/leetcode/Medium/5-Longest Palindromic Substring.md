@@ -1,21 +1,7 @@
-```json
-{
- "title": "Longest Palindromic Substring",
- "number": 5,
- "difficulty": "Medium",
- "tags": [
-  "Two Pointers",
-  "String",
-  "Dynamic Programming"
- ],
- "link": "https://leetcode.com/problems/longest-palindromic-substring/"
-}
-```
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Longest Palindromic Substring
+# 5 - Longest Palindromic Substring
 
 ## Problem Information
 - **Difficulty:** Medium

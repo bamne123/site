@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Longest Substring Without Repeating Characters
+# 3 - Longest Substring Without Repeating Characters
 
 ## Problem Information
 - **Difficulty:** Medium

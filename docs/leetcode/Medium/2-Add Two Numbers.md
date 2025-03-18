@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Add Two Numbers
+# 2 - Add Two Numbers
 
 ## Problem Information
 - **Difficulty:** Medium
