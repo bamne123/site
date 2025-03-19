@@ -6,130 +6,87 @@ import TabItem from '@theme/TabItem';
 ## Problem Information
 - **Difficulty:** Easy
 - **Category:** Array, Prefix Sum
-- **Link:** [LeetCode](https://leetcode.com/problems/find-pivot-index)
+- **Link:** [LeetCode](https://leetcode.com/problems/find-pivot-index/)
 
 ## Problem Statement
-Given an array of integers `nums`, write a function `pivotIndex(nums)` that returns the index of the pivot index (if it exists). 
-The pivot index is defined as the index `i` where the sum of the elements before `i` is equal to the sum of the elements after `i`.
 
-If no pivot index exists, return `-1`.
+Given an array of integers `nums`, calculate the **pivot index** of this array.
 
-### Examples
-Input: `nums = [1, 7, 3, 6, 5, 6]`
-Output: `3`
-Explanation: `sum(0, 2) = 1 + 7 + 3 = 11`
-`sum(3, 5) = 6 + 5 + 6 = 17`
-`nums[3] = 6` is the pivot index.
+The **pivot index** is the index where the sum of all the numbers **strictly** to the left of the index is equal to the sum of all the numbers **strictly** to the index's right.
+
+If the index is on the left edge of the array, then the left sum is `0` because there are no elements to the left. This also applies to the right edge of the array.
+
+Return *the **leftmost pivot index***. If no such index exists, return `-1`.
+
+### Hints
+- You could use a prefix sum approach.
+- Think about how to calculate the sum of elements to the left and right of each index efficiently.
 
 ## Solution Approach
-We can efficiently find the pivot index by calculating the prefix sum of the array. 
 
-1. **Calculate Prefix Sum:**
-   - Create an array `prefixSum` to store the cumulative sum of elements.
-   - `prefixSum[i]` will represent the sum of elements from index 0 to `i`.
+The problem can be solved efficiently using the prefix sum technique. We calculate the prefix sum of the array, which stores the sum of elements from index 0 to each subsequent index. Then, we iterate through the array, calculating the sum of elements to the right of each index as the difference between the total sum and the prefix sum at that index.
 
-2. **Find Pivot Index:**
-   - Iterate through the array `nums`.
-   - For each index `i`, calculate the sum of elements after `i` (`totalSum - prefixSum[i]`).
-   - If the sum of elements before `i` (`prefixSum[i]`) equals the sum of elements after `i`, then `i` is the pivot index.
+We compare the left sum (0 for the first element) and the right sum, and if they are equal, we found the pivot index. We return the index if found, and -1 if no pivot index exists.
 
-## Complexity Analysis
-- **Time Complexity:** O(n)
-    - Calculating the prefix sum takes O(n) time.
-    - Iterating through the array to find the pivot index takes O(n) time.
-- **Space Complexity:** O(n)
-    - The `prefixSum` array stores the cumulative sum up to each element, requiring O(n) space.
+**Video Explanation:** 
+<iframe 
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/u89i60lYx8U" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
 
-## Code Implementation
+### Complexity Analysis
+- **Time Complexity:** O(n) - We iterate through the array once to calculate prefix sums and once to find the pivot index.
+  - The calculation of prefix sums takes O(n) time.
+  - The iteration to find the pivot index also takes O(n) time.
+- **Space Complexity:** O(n) - We need to store the prefix sums, which have the same size as the input array.
+
+### Code Implementation
 
 <Tabs
   defaultValue="python"
   groupId="cody"
   values={[
-    {label: 'Javascript', value: 'javascript' },
-    {label: 'Python', value: 'python' },
-    {label: 'Go', value: 'go' },
-    {label: 'Java', value: 'java' },
-    {label: 'C#', value: 'csharp' }
+    {label: "Python", value: "python" },
+    {label: "Java", value: "java" },
+    {label: "C#", value: "csharp" },
+    {label: "Go", value: "go" },
+    {label: "JavaScript", value: "javascript" },
   ]}
 >
-<TabItem value="javascript">
-```javascript
-function pivotIndex(nums) {
-  const n = nums.length;
-  const prefixSum = new Array(n + 1).fill(0);
-
-  for (let i = 0; i < n; i++) {
-    prefixSum[i + 1] = prefixSum[i] + nums[i];
-  }
-
-  for (let i = 0; i < n; i++) {
-    const leftSum = prefixSum[i];
-    const rightSum = prefixSum[n] - prefixSum[i + 1];
-    if (leftSum === rightSum) {
-      return i;
-    }
-  }
-
-  return -1;
-}
-```
-</TabItem>
 <TabItem value="python">
 ```python
 def pivotIndex(nums):
-  n = len(nums)
-  prefixSum = [0] * (n + 1)
-  for i in range(n):
-    prefixSum[i + 1] = prefixSum[i] + nums[i]
+    prefix_sum = [0] * (len(nums) + 1)
+    for i in range(len(nums)):
+        prefix_sum[i + 1] = prefix_sum[i] + nums[i]
 
-  for i in range(n):
-    leftSum = prefixSum[i]
-    rightSum = prefixSum[n] - prefixSum[i + 1]
-    if leftSum == rightSum:
-      return i
-  return -1
-```
-</TabItem>
-<TabItem value="go">
-```go
-func pivotIndex(nums []int) int {
-  n := len(nums)
-  prefixSum := make([]int, n+1)
-  for i := 0; i < n; i++ {
-    prefixSum[i+1] = prefixSum[i] + nums[i]
-  }
-
-  for i := 0; i < n; i++ {
-    leftSum := prefixSum[i]
-    rightSum := prefixSum[n] - prefixSum[i+1]
-    if leftSum == rightSum {
-      return i
-    }
-  }
-
-  return -1
-}
+    for i in range(len(nums)):
+        left_sum = prefix_sum[i]
+        right_sum = prefix_sum[-1] - prefix_sum[i + 1]
+        if left_sum == right_sum:
+            return i
+    return -1
 ```
 </TabItem>
 <TabItem value="java">
 ```java
 class Solution {
     public int pivotIndex(int[] nums) {
-        int n = nums.length;
-        int[] prefixSum = new int[n + 1];
-        for (int i = 0; i < n; i++) {
+        int[] prefixSum = new int[nums.length + 1];
+        for (int i = 0; i < nums.length; i++) {
             prefixSum[i + 1] = prefixSum[i] + nums[i];
         }
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < nums.length; i++) {
             int leftSum = prefixSum[i];
-            int rightSum = prefixSum[n] - prefixSum[i + 1];
+            int rightSum = prefixSum[nums.length] - prefixSum[i + 1];
             if (leftSum == rightSum) {
                 return i;
             }
         }
-
         return -1;
     }
 }
@@ -137,41 +94,84 @@ class Solution {
 </TabItem>
 <TabItem value="csharp">
 ```csharp
+using System;
+
 public class Solution {
     public int PivotIndex(int[] nums) {
-        int n = nums.Length;
-        int[] prefixSum = new int[n + 1];
-        for (int i = 0; i < n; i++) {
+        int[] prefixSum = new int[nums.Length + 1];
+        for (int i = 0; i < nums.Length; i++) {
             prefixSum[i + 1] = prefixSum[i] + nums[i];
         }
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < nums.Length; i++) {
             int leftSum = prefixSum[i];
-            int rightSum = prefixSum[n] - prefixSum[i + 1];
+            int rightSum = prefixSum[nums.Length] - prefixSum[i + 1];
             if (leftSum == rightSum) {
                 return i;
             }
         }
-
         return -1;
     }
 }
 ```
 </TabItem>
+<TabItem value="go">
+```go
+func pivotIndex(nums []int) int {
+    prefixSum := make([]int, len(nums)+1)
+    for i := 0; i < len(nums); i++ {
+        prefixSum[i+1] = prefixSum[i] + nums[i]
+    }
+
+    for i := 0; i < len(nums); i++ {
+        leftSum := prefixSum[i]
+        rightSum := prefixSum[len(nums)] - prefixSum[i+1]
+        if leftSum == rightSum {
+            return i
+        }
+    }
+    return -1
+}
+```
+</TabItem>
+<TabItem value="javascript">
+```javascript
+function pivotIndex(nums) {
+    const prefixSum = [];
+    prefixSum[0] = 0;
+    for (let i = 0; i < nums.length; i++) {
+        prefixSum[i + 1] = prefixSum[i] + nums[i];
+    }
+
+    for (let i = 0; i < nums.length; i++) {
+        const leftSum = prefixSum[i];
+        const rightSum = prefixSum[nums.length] - prefixSum[i + 1];
+        if (leftSum === rightSum) {
+            return i;
+        }
+    }
+    return -1;
+}
+```
+</TabItem>
 </Tabs>
 
-## Step-by-Step Explanation
-1. Calculate the prefix sum of the array.
-2. Iterate through the array.
-3. For each index `i`, calculate the sum of elements before `i` (`prefixSum[i]`) and the sum of elements after `i` (`prefixSum[n] - prefixSum[i + 1]`).
-4. If the two sums are equal, return the index `i`.
-5. If no pivot index is found, return `-1`.
+### Step-by-Step Explanation
+1. **Calculate Prefix Sums:**
+   - Create a `prefixSum` array to store the cumulative sum of elements up to each index.
+   - `prefixSum[i]` will contain the sum of `nums[0]` to `nums[i-1]`.
+   - Initialize `prefixSum[0]` to 0.
 
+2. **Iterate through the Array:**
+   - For each index `i` in the `nums` array:
+     - Calculate the `leftSum` as `prefixSum[i]`.
+     - Calculate the `rightSum` as the difference between the total sum (`prefixSum[nums.length]`) and the sum up to the next index (`prefixSum[i+1]`).
 
+3. **Compare Sums:**
+   - If `leftSum` is equal to `rightSum`, we have found the pivot index and return `i`.
+
+4. **Return -1:**
+   - If no pivot index is found after iterating through the entire array, return `-1`.
 
 ## Related Problems
-- [Equal Subarrays](https://leetcode.com/problems/equal-subarrays/)
-- [Find the Distance of the Nearest Lexicographically Larger Letter](https://leetcode.com/problems/find-the-distance-of-the-nearest-lexicographically-larger-letter)
-
-
-
+- [Find the Middle Index in Array](https://leetcode.com/problems/find-the-middle-index-in-array/)

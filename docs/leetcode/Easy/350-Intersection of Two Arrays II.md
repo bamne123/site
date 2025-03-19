@@ -5,160 +5,214 @@ import TabItem from '@theme/TabItem';
 
 ## Problem Information
 - **Difficulty:** Easy
-- **Category:** Array, Hash Table, Two Pointers
+- **Category:** Array, Hash Table, Two Pointers, Binary Search, Sorting
 - **Link:** [LeetCode](https://leetcode.com/problems/intersection-of-two-arrays-ii)
 
 ## Problem Statement
-Given two arrays, `nums1` and `nums2`, **both** of which contain unique integers,  return the intersection of these two arrays.  **The intersection** is the set of numbers that are common to both arrays.
 
-You may assume that the arrays were sorted in ascending order. It's guaranteed that each element in the arrays will not exceed 1000.  **The output array can be in any order.**
+Given two integer arrays <code>nums1</code> and <code>nums2</code>, return *an array of their intersection*. Each element in the result must appear as many times as it shows in both arrays and you may return the result in **any order**.
 
-### Examples
+
+**Example 1:**
+
+```
 Input: nums1 = [1,2,2,1], nums2 = [2,2]
 Output: [2,2]
+```
 
-### Constraints
+**Example 2:**
+
+```
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [4,9]
+Explanation: [9,4] is also accepted.
+```
+
+**Constraints:**
+
 - `1 <= nums1.length, nums2.length <= 1000`
-- `-1000 <= nums1[i], nums2[i] <= 1000`
-- nums1 and nums2 contain no duplicate elements.
-- nums1 and nums2 are sorted in a non-decreasing order.
+- `0 <= nums1[i], nums2[i] <= 1000`
+
+
+**Follow up:**
+
+- What if the given array is already sorted? How would you optimize your algorithm?
+- What if <code>nums1</code>&#39;s size is small compared to <code>nums2</code>&#39;s size? Which algorithm is better?
+- What if elements of <code>nums2</code> are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
 ## Solution Approach
-We can use a hash table to efficiently find the intersection of the two arrays. Here's a breakdown of the approach:
 
-1. **Create a hash table:** Initialize an empty hash table to store the elements of `nums1`.
+The problem can be solved efficiently using a hash table (or dictionary) to store the frequency of elements in `nums1`. Then, iterate through `nums2`, and for each element, check if it exists in the hash table and decrement its count. Finally, collect all elements with a count greater than 0.
 
-2. **Populate the hash table:** Iterate through the elements of `nums1` and add each element as a key in the hash table. The value associated with each key can be any arbitrary value (e.g., `1`).
+## Video Explanation
 
-3. **Iterate through `nums2`:** Iterate through the elements of `nums2`. For each element, check if it exists as a key in the hash table. If it does, add it to the result list.
-
-4. **Return the result list:** Return the list containing the intersection of the two arrays.
+<iframe 
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/XZ6ZL1Qg6og" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
 
 ### Complexity Analysis
-- **Time Complexity:** O(n + m), where n is the length of `nums1` and m is the length of `nums2`. We iterate through both arrays once.
+- **Time Complexity:** O(n + m) where n and m are the lengths of `nums1` and `nums2` respectively. We iterate through `nums1` once to build the hash table and then through `nums2` once to find the intersection.
+- **Space Complexity:** O(n) in the worst case, where `nums1` has unique elements. The hash table stores all elements from `nums1`.
 
-- **Space Complexity:** O(n) in the worst case, as we store all elements of `nums1` in the hash table.
+### Code Implementation
 
-## Code Implementation
 
+
+<Tabs
+  defaultValue="python"
+  groupId="cody"
+  values={[
+    {label: 'Python', value: 'python' },
+    {label: 'Javascript', value: 'javascript' },
+    {label: 'Java', value: 'java' },
+    {label: 'C#', value: 'csharp' },
+    {label: 'Go', value: 'go' },
+  ]}
+>
+<TabItem value="python">
 ```python
 def intersect(nums1, nums2):
-    hash_table = {}
-    result = []
+    hash_map = {}
     for num in nums1:
-        if num not in hash_table:
-            hash_table[num] = 1
+        if num in hash_map:
+            hash_map[num] += 1
+        else:
+            hash_map[num] = 1
+    result = []
     for num in nums2:
-        if num in hash_table:
+        if num in hash_map and hash_map[num] > 0:
             result.append(num)
-            hash_table[num] = 0
+            hash_map[num] -= 1
     return result
-
-
 ```
-
+</TabItem>
+<TabItem value="javascript">
 ```javascript
 function intersect(nums1, nums2) {
-    const hashTable = {};
-    const result = [];
-    for (const num of nums1) {
-        if (num in hashTable) {
-            hashTable[num]++;
-        } else {
-            hashTable[num] = 1;
-        }
+  const hashmap = {};
+  for (const num of nums1) {
+    if (num in hashmap) {
+      hashmap[num]++;
+    } else {
+      hashmap[num] = 1;
     }
-    for (const num of nums2) {
-        if (num in hashTable && hashTable[num] > 0) {
-            result.push(num);
-            hashTable[num]--;
-        }
+  }
+  const result = [];
+  for (const num of nums2) {
+    if (num in hashmap && hashmap[num] > 0) {
+      result.push(num);
+      hashmap[num]--;
     }
-    return result;
+  }
+  return result;
 }
 ```
-
-```go
-func intersect(nums1 []int, nums2 []int) []int {
-    hashTable := make(map[int]int)
-    result := []int{}
-    for _, num := range nums1 {
-        if _, ok := hashTable[num]; !ok {
-            hashTable[num] = 1
-        } else {
-            hashTable[num]++
-        }
-    }
-    for _, num := range nums2 {
-        if _, ok := hashTable[num]; ok && hashTable[num] > 0 {
-            result = append(result, num)
-            hashTable[num]--
-        }
-    }
-    return result
-}
-```
-
+</TabItem>
+<TabItem value="java">
 ```java
 class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
-        Map<Integer, Integer> hashTable = new HashMap<>();
-        List<Integer> result = new ArrayList<>();
+        Map<Integer, Integer> hashmap = new HashMap<>();
         for (int num : nums1) {
-            if (hashTable.containsKey(num)) {
-                hashTable.put(num, hashTable.get(num) + 1);
+            if (hashmap.containsKey(num)) {
+                hashmap.put(num, hashmap.get(num) + 1);
             } else {
-                hashTable.put(num, 1);
+                hashmap.put(num, 1);
             }
         }
+        List<Integer> result = new ArrayList<>();
         for (int num : nums2) {
-            if (hashTable.containsKey(num) && hashTable.get(num) > 0) {
+            if (hashmap.containsKey(num) && hashmap.get(num) > 0) {
                 result.add(num);
-                hashTable.put(num, hashTable.get(num) - 1);
+                hashmap.put(num, hashmap.get(num) - 1);
             }
         }
-        return result.stream().mapToInt(Integer::intValue).toArray();
+        int[] res = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            res[i] = result.get(i);
+        }
+        return res;
     }
 }
 ```
-
+</TabItem>
+<TabItem value="csharp">
 ```csharp
-public int[] Intersect(int[] nums1, int[] nums2) {
-    Dictionary<int, int> hashTable = new Dictionary<int, int>();
-    List<int> result = new List<int>();
-    foreach (int num in nums1) {
-        if (hashTable.ContainsKey(num)) {
-            hashTable[num]++;
-        } else {
-            hashTable[num] = 1;
+using System.Collections.Generic;
+public class Solution {
+    public int[] Intersect(int[] nums1, int[] nums2) {
+        Dictionary<int, int> hashmap = new Dictionary<int, int>();
+        foreach (int num in nums1) {
+            if (hashmap.ContainsKey(num)) {
+                hashmap[num]++;
+            } else {
+                hashmap[num] = 1;
+            }
         }
-    }
-    foreach (int num in nums2) {
-        if (hashTable.ContainsKey(num) && hashTable[num] > 0) {
-            result.Add(num);
-            hashTable[num]--;
+        List<int> result = new List<int>();
+        foreach (int num in nums2) {
+            if (hashmap.ContainsKey(num) && hashmap[num] > 0) {
+                result.Add(num);
+                hashmap[num]--;
+            }
         }
+        return result.ToArray();
     }
-    return result.ToArray();
 }
 ```
+</TabItem>
+<TabItem value="go">
+```go
+func intersect(nums1 []int, nums2 []int) []int {
+    hashmap := make(map[int]int)
+    for _, num := range nums1 {
+        if _, ok := hashmap[num]; ok {
+            hashmap[num]++
+        } else {
+            hashmap[num] = 1
+        }
+    }
+    result := []int{}
+    for _, num := range nums2 {
+        if count, ok := hashmap[num]; ok && count > 0 {
+            result = append(result, num)
+            hashmap[num]--
+        }
+    }
+    return result
+}
+```
+</TabItem>
+</Tabs>
 
+### Step-by-Step Explanation
 
+1. **Create a hash table:** Initialize an empty hash table (dictionary) to store the frequency of elements in `nums1`.
+2. **Populate the hash table:** Iterate through `nums1` and for each element:
+   - If the element is already in the hash table, increment its count.
+   - Otherwise, add the element to the hash table with a count of 1.
+3. **Iterate through `nums2`:** For each element in `nums2`:
+   - Check if the element exists in the hash table and its count is greater than 0.
+   - If yes, append the element to the `result` and decrement its count in the hash table.
+4. **Return the result:** Return the `result` array, which contains the intersection of `nums1` and `nums2`.
 
+## Alternative Approaches
 
-## Step-by-Step Explanation
-1. **Create a hash table:**
-   - This hash table will store the elements of `nums1` as keys, and we can use `1` as the value for each key.
+Not applicable for this specific problem.
 
-2. **Populate the hash table:**
-   - Iterate through each element in `nums1` and add it as a key in the hash table. If the element already exists in the hash table, increment its value.
+## Common Mistakes and Pitfalls
 
-3. **Iterate through `nums2`:**
-   - For each element in `nums2`, check if it exists as a key in the hash table.
-   - If it exists and its value is greater than 0, it means the element is present in both arrays. Add it to the `result` list and decrement its value in the hash table to avoid duplicates.
+- **Not handling duplicate elements:** Make sure to handle duplicate elements correctly in both arrays.
+- **Incorrectly updating hash table counts:** Ensure that you decrement the count in the hash table when an element is added to the `result`.
 
-4. **Return the result list:**
-   - The `result` list will contain the intersection of the two arrays.
+## Related Problems
+
+- [Intersection of Two Arrays] (https://leetcode.com/problems/intersection-of-two-arrays/)
+- [Intersection of Two Arrays III] (https://leetcode.com/problems/intersection-of-two-arrays-iii/)
 
 
 

@@ -23,22 +23,22 @@ This document outlines a 150-day plan to prepare for MAANG interviews.
 
 ### DAY 1
 
-* [Two Sum](/docs/leetcode/Easy/Two%20Sum)
-* [Best Time to Buy and Sell Stock](/docs/leetcode/Easy/Best%20Time%20to%20Buy%20and%20Sell%20Stock)
-* [Majority Element](/docs/leetcode/Easy/Majority%20Element)
-* [Move Zeroes](/docs/leetcode/Easy/Move%20Zeroes)
-* [Squares of a Sorted Array](/docs/leetcode/Easy/Squares%20of%20a%20Sorted%20Array)
-* [Merge Sorted Array](/docs/leetcode/Easy/Merge%20Sorted%20Array)
+* [1 - Two Sum](/docs/leetcode/Easy/Two%20Sum)
+* [121 - Best Time to Buy and Sell Stock](/docs/leetcode/Easy/Best%20Time%20to%20Buy%20and%20Sell%20Stock)
+* [169 - Majority Element](/docs/leetcode/Easy/Majority%20Element)
+* [283 - Move Zeroes](/docs/leetcode/Easy/Move%20Zeroes)
+* [977 - Squares of a Sorted Array](/docs/leetcode/Easy/Squares%20of%20a%20Sorted%20Array)
+* [88 - Merge Sorted Array](/docs/leetcode/Easy/Merge%20Sorted%20Array)
 
 ### DAY 2
 
-* [Remove Duplicates from Sorted Array](/docs/leetcode/Easy/Remove%20Duplicates%20from%20Sorted%20Array)
-* [Remove Duplicates from Sorted Array II](/docs/leetcode/Medium/Remove%20Duplicates%20from%20Sorted%20Array%20II)
-* [Find All Numbers Disappeared in an Array](/docs/leetcode/Easy/Find%20All%20Numbers%20Disappeared%20in%20an%20Array)
-* [Intersection of Two Arrays](/docs/leetcode/Easy/Intersection%20of%20Two%20Arrays)
-* [Intersection of Two Arrays II](/docs/leetcode/Easy/Intersection%20of%20Two%20Arrays%20II)
-* [Maximum Population Year](/docs/leetcode/Easy/Maximum%20Population%20Year)
-* [Find Pivot Index](/docs/leetcode/Easy/Find%20Pivot%20Index)
+* [26 - Remove Duplicates from Sorted Array](/docs/leetcode/Easy/Remove%20Duplicates%20from%20Sorted%20Array)
+* [80 - Remove Duplicates from Sorted Array II](/docs/leetcode/Medium/Remove%20Duplicates%20from%20Sorted%20Array%20II)
+* [448 - Find All Numbers Disappeared in an Array](/docs/leetcode/Easy/Find%20All%20Numbers%20Disappeared%20in%20an%20Array)
+* [349 - Intersection of Two Arrays](/docs/leetcode/Easy/Intersection%20of%20Two%20Arrays)
+* [350 - Intersection of Two Arrays II](/docs/leetcode/Easy/Intersection%20of%20Two%20Arrays%20II)
+* [1854 - Maximum Population Year](/docs/leetcode/Easy/Maximum%20Population%20Year)
+* [724 - Find Pivot Index](/docs/leetcode/Easy/Find%20Pivot%20Index)
 
 ### DAY 3
 
