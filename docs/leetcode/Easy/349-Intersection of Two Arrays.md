@@ -6,9 +6,10 @@ import TabItem from '@theme/TabItem';
 ## Problem Information
 - **Difficulty:** Easy
 - **Category:** Array, Hash Table, Two Pointers, Binary Search, Sorting
-- **Link:** [LeetCode](https://leetcode.com/problems/intersection-of-two-arrays/)
+- **Link:** [LeetCode](https://leetcode.com/problems/intersection-of-two-arrays)
 
 ## Problem Statement
+
 <p>Given two integer arrays <code>nums1</code> and <code>nums2</code>, return <em>an array of their <span data-keyword="array-intersection">intersection</span></em>. Each element in the result must be <strong>unique</strong> and you may return the result in <strong>any order</strong>.</p>
 
 <p>&nbsp;</p>
@@ -35,13 +36,13 @@ import TabItem from '@theme/TabItem';
 	<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 1000</code></li>
 </ul>
 
+
+### Hints
+- Use a HashSet to store the elements of one array.
+- Iterate through the second array and check if the element exists in the HashSet.
+
 ## Solution Approach
-We can use a hash table to efficiently find the intersection of two arrays.
-
-1. **Create a hash table:** Iterate through the `nums1` array and store each element as a key in the hash table with a value of 1. This indicates that the element is present in `nums1`.
-2. **Iterate through `nums2`:** For each element in `nums2`, check if it exists as a key in the hash table.
-3. **Add to result:** If the element exists in the hash table, it's an intersection element. Add it to the result array.
-
+The solution involves using a hash table to store the elements of the first array and then iterating through the second array to check for common elements.
 
 **Video Explanation:** 
 <iframe 
@@ -49,41 +50,42 @@ We can use a hash table to efficiently find the intersection of two arrays.
   height="315"
   src="https://www.youtube.com/embed/fwUTXaMom6U" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen>
+  allowfullscreen="">
 </iframe>
 
 ### Complexity Analysis
-- **Time Complexity:** O(n + m) where n is the length of `nums1` and m is the length of `nums2`. We iterate through both arrays once.
-- **Space Complexity:** O(n) in the worst case, where all elements of `nums1` are unique and are added to the hash table.
+- **Time Complexity:** O(n + m)
+  - Where n and m are the lengths of the input arrays nums1 and nums2, respectively. The algorithm iterates through both arrays once.
+- **Space Complexity:** O(min(n, m))
+  - In the worst case, the space required to store the intersection is the size of the smaller array.
 
 ### Code Implementation
 <Tabs
   defaultValue="python"
   groupId="cody"
   values={[
-    {label: "Python", value: "python"},
-    {label: "JavaScript", value: "javascript"},
-    {label: "Java", value: "java"},
-    {label: "C#", value: "csharp"},
-    {label: "Go", value: "go"},
+    {label: "python", value: "python" },
   ]}
 >
 <TabItem value="python">
 ```python
-def intersect(nums1, nums2):
-    hash_table = {}
-    result = []
-    for num in nums1:
-        if num in hash_table:
-            hash_table[num] += 1
-        else:
-            hash_table[num] = 1
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        temp = {}
+        result = []
 
-    for num in nums2:
-        if num in hash_table and hash_table[num] > 0:
-            result.append(num)
-            hash_table[num] -= 1
-    return result
+        for num in nums1:
+            if num in temp:
+                temp[num] += 1
+            else:
+                temp[num] = 1
+
+        for num in nums2:
+            if num in temp and temp[num] > 0:
+                result.append(num)
+                temp[num] = 0
+
+        return result
 ```
 </TabItem>
 <TabItem value="javascript">
@@ -185,43 +187,27 @@ func intersect(nums1 []int, nums2 []int) []int {
 </Tabs>
 
 ### Step-by-Step Explanation
-1. Create an empty hash table `hashTable` to store the elements of `nums1`.
-2. Iterate through `nums1` and for each element `num`:
-   - If `num` is already in `hashTable`, increment its count.
-   - Otherwise, add `num` to `hashTable` with a count of 1.
-3. Iterate through `nums2`:
-   - For each element `num` in `nums2`:
-     - If `num` exists in `hashTable` and its count is greater than 0:
-       - Append `num` to the `result` array.
-       - Decrement the count of `num` in `hashTable`.
-4. Return the `result` array.
+1. Create a dictionary `temp` to store the frequency of each number in `nums1`.
+2. Iterate through `nums1` and update the frequency of each number in `temp`.
+3. Create an empty list `result` to store the intersection.
+4. Iterate through `nums2`, and for each number, check if it exists in `temp` and its frequency is greater than 0.
+5. If a number exists in both arrays, append it to `result` and decrement its frequency in `temp` to ensure uniqueness.
+6. Return the `result` list, which contains the intersection of the two arrays.
 
 ## Alternative Approaches
-1. **Sorting:**
-   - Sort both arrays.
-   - Iterate through the arrays simultaneously, comparing elements.
-   - If elements are equal, add them to the result and advance both pointers.
-   - Time Complexity: O(n log n + m log m) for sorting
-   - Space Complexity: O(1)
-
-2. **Two Pointers:**
-   - Use two pointers, one for each array.
-   - Advance the pointers based on the comparison of elements.
-   - If elements are equal, add them to the result and advance both pointers.
+1. **Using Sets**
    - Time Complexity: O(n + m)
-   - Space Complexity: O(1)
+   - Space Complexity: O(min(n, m))
+   - Trade-offs: Simpler code, but may not be as efficient for very large arrays.
+
+2. **Sorting and Two Pointers**
+   - Time Complexity: O(n log n + m log m)
+   - Space Complexity: O(1) if sorting is done in place, O(n) otherwise
+   - Trade-offs: More efficient for sorted arrays or when space is a concern.
 
 ## Common Mistakes and Pitfalls
-1. **Not handling duplicates correctly:**
-   - Ensure that the intersection elements are unique and only added once to the result array.
-2. **Forgetting to decrement counts in the hash table:**
-   - When adding an element to the result, decrement its count in the hash table to avoid adding it multiple times.
-3. **Incorrectly handling empty arrays:**
-   - Consider edge cases where one or both arrays are empty.
-
+1. Forgetting to handle duplicates in the result.
+2. Not considering the case where one of the arrays is empty.
 
 ## Related Problems
-- [https://leetcode.com/problems/contains-duplicate/](https://leetcode.com/problems/contains-duplicate/) - Contains Duplicate
-- [https://leetcode.com/problems/single-number-ii/](https://leetcode.com/problems/single-number-ii/) - Single Number II
-
-
+- [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii)

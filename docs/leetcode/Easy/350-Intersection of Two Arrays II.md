@@ -10,84 +10,91 @@ import TabItem from '@theme/TabItem';
 
 ## Problem Statement
 
-Given two integer arrays <code>nums1</code> and <code>nums2</code>, return *an array of their intersection*. Each element in the result must appear as many times as it shows in both arrays and you may return the result in **any order**.
+<p>Given two integer arrays <code>nums1</code> and <code>nums2</code>, return <em>an array of their intersection</em>. Each element in the result must appear as many times as it shows in both arrays and you may return the result in <strong>any order</strong>.</p>
 
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
 
-**Example 1:**
+<pre>
+<strong>Input:</strong> nums1 = [1,2,2,1], nums2 = [2,2]
+<strong>Output:</strong> [2,2]
+</pre>
 
-```
-Input: nums1 = [1,2,2,1], nums2 = [2,2]
-Output: [2,2]
-```
+<p><strong class="example">Example 2:</strong></p>
 
-**Example 2:**
+<pre>
+<strong>Input:</strong> nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+<strong>Output:</strong> [4,9]
+<strong>Explanation:</strong> [9,4] is also accepted.
+</pre>
 
-```
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
-Output: [4,9]
-Explanation: [9,4] is also accepted.
-```
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Constraints:**
+<ul>
+	<li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>
+	<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 1000</code></li>
+</ul>
 
-- `1 <= nums1.length, nums2.length <= 1000`
-- `0 <= nums1[i], nums2[i] <= 1000`
+<p>&nbsp;</p>
+<p><strong>Follow up:</strong></p>
 
+<ul>
+	<li>What if the given array is already sorted? How would you optimize your algorithm?</li>
+	<li>What if <code>nums1</code>'s size is small compared to <code>nums2</code>'s size? Which algorithm is better?</li>
+	<li>What if elements of <code>nums2</code> are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?</li>
+</ul>
 
-**Follow up:**
-
-- What if the given array is already sorted? How would you optimize your algorithm?
-- What if <code>nums1</code>&#39;s size is small compared to <code>nums2</code>&#39;s size? Which algorithm is better?
-- What if elements of <code>nums2</code> are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
+### Hints
+- Use a hash map to count the occurrences of each number in the first array.
+- Iterate through the second array, and for each number, check if it exists in the hash map and its count is greater than 0.
+- If the number exists and its count is greater than 0, add it to the result and decrement the count in the hash map.
 
 ## Solution Approach
+The solution uses a hash map (dictionary in Python) to store the frequency of each number in the first array (nums1). Then, it iterates through the second array (nums2), checking if each number is present in the hash map and has a count greater than 0. If so, it appends the number to the result list and decrements its count in the hash map. Finally, it returns the result list containing the intersection of the two arrays with the correct frequencies.
 
-The problem can be solved efficiently using a hash table (or dictionary) to store the frequency of elements in `nums1`. Then, iterate through `nums2`, and for each element, check if it exists in the hash table and decrement its count. Finally, collect all elements with a count greater than 0.
-
-## Video Explanation
-
+**Video Explanation:** 
 <iframe 
   width="560"
   height="315"
   src="https://www.youtube.com/embed/XZ6ZL1Qg6og" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen>
+  allowfullscreen="">
 </iframe>
 
 ### Complexity Analysis
-- **Time Complexity:** O(n + m) where n and m are the lengths of `nums1` and `nums2` respectively. We iterate through `nums1` once to build the hash table and then through `nums2` once to find the intersection.
-- **Space Complexity:** O(n) in the worst case, where `nums1` has unique elements. The hash table stores all elements from `nums1`.
+- **Time Complexity:** O(m + n)
+  - The time complexity is O(m + n), where n is the length of nums1 and m is the length of nums2, as we iterate through both arrays once.
+- **Space Complexity:** O(min(m, n))
+  - The space complexity is O(min(m, n)) in the worst case when one array contains all unique elements and we store them in the hash map.
 
 ### Code Implementation
-
-
-
 <Tabs
   defaultValue="python"
   groupId="cody"
   values={[
-    {label: 'Python', value: 'python' },
-    {label: 'Javascript', value: 'javascript' },
-    {label: 'Java', value: 'java' },
-    {label: 'C#', value: 'csharp' },
-    {label: 'Go', value: 'go' },
+    {label: 'python', value: 'python' },
   ]}
 >
-<TabItem value="python">
+<TabItem value='python'>
 ```python
-def intersect(nums1, nums2):
-    hash_map = {}
-    for num in nums1:
-        if num in hash_map:
-            hash_map[num] += 1
-        else:
-            hash_map[num] = 1
-    result = []
-    for num in nums2:
-        if num in hash_map and hash_map[num] > 0:
-            result.append(num)
-            hash_map[num] -= 1
-    return result
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        temp = {}
+        result = []
+
+        for num in nums1:
+            if num in temp:
+                temp[num] += 1
+            else:
+                temp[num] = 1
+        
+        for num in nums2:
+            if num in temp and temp[num] > 0:
+                result.append(num)
+                temp[num] -= 1
+        
+        return result
 ```
 </TabItem>
 <TabItem value="javascript">
@@ -190,29 +197,33 @@ func intersect(nums1 []int, nums2 []int) []int {
 </Tabs>
 
 ### Step-by-Step Explanation
-
-1. **Create a hash table:** Initialize an empty hash table (dictionary) to store the frequency of elements in `nums1`.
-2. **Populate the hash table:** Iterate through `nums1` and for each element:
-   - If the element is already in the hash table, increment its count.
-   - Otherwise, add the element to the hash table with a count of 1.
-3. **Iterate through `nums2`:** For each element in `nums2`:
-   - Check if the element exists in the hash table and its count is greater than 0.
-   - If yes, append the element to the `result` and decrement its count in the hash table.
-4. **Return the result:** Return the `result` array, which contains the intersection of `nums1` and `nums2`.
+1. Initialize an empty hash map `temp` to store the frequency of numbers in `nums1`.
+2. Initialize an empty list `result` to store the intersection of the two arrays.
+3. Iterate through `nums1`:
+   - If a number is already in `temp`, increment its count.
+   - Otherwise, add the number to `temp` with a count of 1.
+4. Iterate through `nums2`:
+   - If a number is in `temp` and its count is greater than 0:
+     - Append the number to `result`.
+     - Decrement the count of the number in `temp`.
+5. Return the `result` list.
 
 ## Alternative Approaches
+1. **Sorting and Two Pointers**
+   - Time Complexity: O(n log n + m log m)
+   - Space Complexity: O(1) (excluding space for sorting)
+   - Trade-offs: Requires sorting both arrays, but uses constant extra space. More efficient if the arrays are already sorted.
 
-Not applicable for this specific problem.
+2. **Using Collections.Counter (Python)**
+   - Time Complexity: O(m + n)
+   - Space Complexity: O(min(m, n))
+   - Trade-offs: More concise using Python's built-in `Counter` class for frequency counting.
 
 ## Common Mistakes and Pitfalls
-
-- **Not handling duplicate elements:** Make sure to handle duplicate elements correctly in both arrays.
-- **Incorrectly updating hash table counts:** Ensure that you decrement the count in the hash table when an element is added to the `result`.
+1. Not handling the case where a number appears multiple times in both arrays.
+2. Incorrectly updating the frequency count in the hash map, leading to incorrect results.
+3. Not considering the case where one of the arrays is empty.
 
 ## Related Problems
-
-- [Intersection of Two Arrays] (https://leetcode.com/problems/intersection-of-two-arrays/)
-- [Intersection of Two Arrays III] (https://leetcode.com/problems/intersection-of-two-arrays-iii/)
-
-
-
+- [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays)
+- [Find Common Characters](https://leetcode.com/problems/find-common-characters)

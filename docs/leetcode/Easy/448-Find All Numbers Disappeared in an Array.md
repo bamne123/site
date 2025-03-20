@@ -10,195 +10,201 @@ import TabItem from '@theme/TabItem';
 
 ## Problem Statement
 
-Given an array `nums` of `n` integers where `nums[i]` is in the range `[1, n]`, return *an array of all the integers in the range* `[1, n]` *that do not appear in* `nums`.
+<p>Given an array <code>nums</code> of <code>n</code> integers where <code>nums[i]</code> is in the range <code>[1, n]</code>, return <em>an array of all the integers in the range</em> <code>[1, n]</code> <em>that do not appear in</em> <code>nums</code>.</p>
 
-**Example 1:**
-```
-Input: nums = [4,3,2,7,8,2,3,1]
-Output: [5,6]
-```
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<pre>
+<strong>Input:</strong> nums = [4,3,2,7,8,2,3,1]
+<strong>Output:</strong> [5,6]
+</pre>
+<p><strong class="example">Example 2:</strong></p>
+<pre>
+<strong>Input:</strong> nums = [1,1]
+<strong>Output:</strong> [2]
+</pre>
 
-**Example 2:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-```
-Input: nums = [1,1]
-Output: [2]
-```
+<ul>
+    <li><code>n == nums.length</code></li>
+    <li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
+    <li><code>1 &lt;= nums[i] &lt;= n</code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Follow up:</strong> Could you do it without extra space and in <code>O(n)</code> runtime? You may assume the returned list does not count as extra space.</p>
 
 
-**Constraints:**
-- `n == nums.length`
-- `1 &lt;= n &lt;= 10^5`
-- `1 &lt;= nums[i] &lt;= n`
-
-
-**Follow up:** Could you do it without extra space and in `O(n)` runtime? You may assume the returned list does not count as extra space.
-
+### Hints
+- The input array's elements are within the range [1, n].
+- Consider using a set to store the numbers present in the input array.
+- Iterate through the range [1, n] and check if each number is present in the set.
 
 ## Solution Approach
+The solution involves creating a set to store the unique numbers present in the input array `nums`. Then, it iterates from 1 to `n` (inclusive), checking if each number is in the set. If a number is not in the set, it means that number is missing from the input array, and it's added to the result list. Finally, the list of missing numbers is returned.
 
-This problem can be efficiently solved using a hash table (or a set). The core idea is to iterate through the input array `nums` and mark the presence of each number in the range [1, n].  
+**Video Explanation:** 
+<iframe 
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/8i-f24YFWC4" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen="">
+</iframe>
 
-**Here's a breakdown:**
+### Complexity Analysis
+- **Time Complexity:** O(n)
+  - The algorithm iterates through the input array `nums` once to add elements to the set and then iterates from 1 to `n` to find missing numbers.
+- **Space Complexity:** O(n)
+  - A set is used to store the unique numbers from the input array, which can take up to O(n) space in the worst case.
 
-1. **Initialization:** Create a hash table (or set) to store the presence of each number from 1 to `n`.
-2. **Marking Presence:** Iterate through `nums`. For each number `num` in `nums`, mark its presence in the hash table by setting the corresponding key to `True`. 
-3. **Identifying Missing Numbers:**  After processing all numbers in `nums`, iterate through the range [1, n].  For each number `i`, if it is not present (has a value of `False`) in the hash table, add it to the result list.
-
-
-
-## Solution Code
+### Code Implementation
 <Tabs
   defaultValue="python"
   groupId="cody"
   values={[
-    {label: "Python", value: "python" },
-    {label: "JavaScript", value: "javascript" },
-    {label: "Java", value: "java" },
-    {label: "C#", value: "csharp" },
-    {label: "Go", value: "go" },
+    {label: 'python', value: 'python' },
+    {label: 'javascript', value: 'javascript' },
+    {label: 'java', value: 'java' },
+    {label: 'csharp', value: 'csharp' },
+    {label: 'go', value: 'go' },
   ]}
 >
-<TabItem value="python">
+<TabItem value='python'>
 ```python
-def findDisappearedNumbers(nums):
-    n = len(nums)
-    present = [False] * (n + 1)
-    for num in nums:
-        present[num] = True
-    result = []
-    for i in range(1, n + 1):
-        if not present[i]:
-            result.append(i)
-    return result
+class Solution:
+    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
+        temp = set()
+        result = []
+
+        for num in nums:
+            temp.add(num)
+
+        for i in range(1, len(nums)+1):
+            if i not in temp:
+                result.append(i)
+
+        return result
 ```
 </TabItem>
-<TabItem value="javascript">
+<TabItem value='javascript'>
 ```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
 var findDisappearedNumbers = function(nums) {
-    const n = nums.length;
-    const present = Array(n + 1).fill(false);
-
-    for (let num of nums) {
-        present[num] = true;
-    }
-
+    const numSet = new Set(nums);
     const result = [];
-    for (let i = 1; i <= n; i++) {
-        if (!present[i]) {
+
+    for (let i = 1; i <= nums.length; i++) {
+        if (!numSet.has(i)) {
             result.push(i);
         }
     }
+
     return result;
 };
 ```
 </TabItem>
-<TabItem value="java">
+<TabItem value='java'>
 ```java
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 class Solution {
-    public int[] findDisappearedNumbers(int[] nums) {
-        int n = nums.length;
-        boolean[] present = new boolean[n + 1];
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        Set<Integer> numSet = new HashSet<>();
+        List<Integer> result = new ArrayList<>();
 
         for (int num : nums) {
-            present[num] = true;
+            numSet.add(num);
         }
 
-        List<Integer> result = new ArrayList<>();
-        for (int i = 1; i <= n; i++) {
-            if (!present[i]) {
+        for (int i = 1; i <= nums.length; i++) {
+            if (!numSet.contains(i)) {
                 result.add(i);
             }
         }
-        return result.stream().mapToInt(i -> i).toArray();
+
+        return result;
     }
 }
 ```
 </TabItem>
-<TabItem value="csharp">
+<TabItem value='csharp'>
 ```csharp
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Solution {
-    public int[] FindDisappearedNumbers(int[] nums) {
-        int n = nums.Length;
-        bool[] present = new bool[n + 1];
-
-        for (int num : nums) {
-            present[num] = true;
-        }
-
+    public IList<int> FindDisappearedNumbers(int[] nums) {
+        HashSet<int> numSet = new HashSet<int>(nums);
         List<int> result = new List<int>();
-        for (int i = 1; i <= n; i++) {
-            if (!present[i]) {
+
+        for (int i = 1; i <= nums.Length; i++) {
+            if (!numSet.Contains(i)) {
                 result.Add(i);
             }
         }
-        return result.ToArray();
+
+        return result;
     }
 }
 ```
 </TabItem>
-<TabItem value="go">
+<TabItem value='go'>
 ```go
 func findDisappearedNumbers(nums []int) []int {
-    n := len(nums)
-    present := make([]bool, n+1)
+    numSet := make(map[int]bool)
+    result := []int{}
 
     for _, num := range nums {
-        present[num] = true
+        numSet[num] = true
     }
 
-    var result []int
-    for i := 1; i <= n; i++ {
-        if !present[i] {
+    for i := 1; i <= len(nums); i++ {
+        if !numSet[i] {
             result = append(result, i)
         }
     }
+
     return result
 }
 ```
 </TabItem>
 </Tabs>
 
-## Step-by-Step Explanation
+### Step-by-Step Explanation
+1. Create an empty set called `temp` to store the unique numbers in `nums`.
+2. Iterate through the `nums` array and add each number to the `temp` set.
+3. Create an empty list called `result` to store the disappeared numbers.
+4. Iterate from 1 to `n` (the length of `nums` plus 1).
+5. For each number `i` in the range, check if `i` is present in the `temp` set.
+6. If `i` is not in `temp`, it means `i` is a disappeared number, so add it to the `result` list.
+7. After the loop finishes, return the `result` list containing all the disappeared numbers.
 
-1. **Create a Hash Table:**
-   - Initialize a boolean array `present` of size `n+1` (where `n` is the length of the input array `nums`). This array will act as our hash table. 
-   - Each index in `present` corresponds to a number from 1 to `n`.
-   - Initially, all elements in `present` are set to `False`, indicating that no numbers are present yet.
+## Alternative Approaches
+1. **In-place Modification:**
+   - Time Complexity: O(n)
+   - Space Complexity: O(1)
+   - Trade-offs: Modifies the original array, but uses constant space.
 
-2. **Mark Numbers:**
-   - Iterate through each number `num` in the input array `nums`. 
-   - For each `num`, set the corresponding index in `present` to `True`. This marks the number as "present" in our hash table.
-
-3. **Identify Missing Numbers:**
-   - Iterate from 1 to `n`.
-   - For each number `i` in this range:
-     - If `present[i]` is `False`, it means that number `i` is not present in the input array `nums`.
-     - Append `i` to the `result` list.
-
-4. **Return Result:**
-   - Return the `result` list, which contains all the missing numbers.
-
-
+2. **Using an Auxiliary Array:**
+   - Time Complexity: O(n)
+   - Space Complexity: O(n)
+   - Trade-offs: Does not modify the original array, but uses linear space.
 
 ## Common Mistakes and Pitfalls
-
-- **Off-by-One Error:**
-   -  Ensure the hash table size is `n+1` to accommodate numbers from 1 to `n`.
-
-- **Incorrect Indexing:**
-   -  Verify that you are correctly using the number `num` as the index in the `present` array.
-
-- **Space Complexity:**
-   -  If the input array `nums` can be very large, be mindful of the space complexity of creating a hash table of size `n+1`.
-
-
+1. Forgetting to handle the edge case where the input array is empty.
+2. Not considering the constraint that the numbers are in the range [1, n].
+3. Using the wrong data structure, which can lead to inefficient code.
 
 ## Related Problems
-- [Missing Number](https://leetcode.com/problems/missing-number/)
-- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+- [First Missing Positive](https://leetcode.com/problems/first-missing-positive)
+- [Missing Number](https://leetcode.com/problems/missing-number)
